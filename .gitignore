@@ -1,0 +1,33 @@
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment / secrets
+.env
+.env.*
+
+# Dependencies (if tooling is ever added)
+node_modules/
+
+# Build / deploy artifacts
+dist/
+.netlify/
+.cache/
+
+
+# md files
+deploy.md
+krixo_claude_code_prompt.md
