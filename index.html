@@ -184,6 +184,11 @@
 /* ---------- pre-launch badge ---------- */
 @keyframes kxPing{0%{transform:scale(1);opacity:0.55;}70%,100%{transform:scale(2.6);opacity:0;}}
 
+/* ---------- footer links: keep on one line ---------- */
+.footer-links{flex-wrap:nowrap!important;}
+.footer-links a{white-space:nowrap;}
+@media (max-width:560px){.footer-links{gap:12px!important;}.footer-links a{font-size:12px!important;}}
+
 /* ---------- responsive ---------- */
 @media (max-width:980px){
   [style*="grid-template-columns:1.05fr 0.95fr"],
@@ -740,7 +745,7 @@
         <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px;"><span style="color:var(--c42,#3C4640);">kri</span><span style="color:var(--c15,#4F7A00);">x</span><span style="color:var(--c42,#3C4640);">o</span></span>
         <span style="font-size:12.5px; color:var(--c7,#98A0A8); margin-left:6px;">Read · Understand · Remember</span>
       </div>
-      <div style="display:flex; gap:24px; align-items:center;">
+      <div class="footer-links" style="display:flex; gap:18px; align-items:center; flex-wrap:nowrap;">
         <a class="kx-foot" href="#retain" style="color:var(--c25,#79828A); text-decoration:none; font-size:13.5px;">Retention</a>
         <a class="kx-foot" href="#privacy" style="color:var(--c25,#79828A); text-decoration:none; font-size:13.5px;">Privacy</a>
         <a class="kx-foot" href="#pricing" style="color:var(--c25,#79828A); text-decoration:none; font-size:13.5px;">Pricing</a>
