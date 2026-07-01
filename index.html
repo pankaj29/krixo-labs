@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Krixo - Read it once. Remember it for good.</title>
 <meta name="description" content="Krixo turns your PDFs, EPUBs and web articles into lasting knowledge. Every highlight becomes a spaced-repetition quiz card - private, on-device, offline. Join the waitlist.">
-<meta name="theme-color" content="#77B900">
+<meta name="theme-color" content="#EDEFE9" id="metaThemeColor">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Krixo - Read it once. Remember it for good.">
 <meta property="og:description" content="An on-device AI reader that turns everything you read into lasting knowledge with spaced repetition. Private by design.">
@@ -208,6 +208,8 @@
 }
 @media (max-width:560px){
   [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:1fr!important;}
+  .wl-formEl{flex-direction:column!important;width:100%!important;max-width:100%!important;align-items:stretch!important;}
+  .wl-formEl .kx-input,.wl-formEl button{width:100%!important;flex:none!important;}
 }
 </style>
 </head>
@@ -746,12 +748,16 @@
   var root=document.documentElement;
   // ---- theme persistence ----
   var KEY='krixo-theme';
+  var meta=document.getElementById('metaThemeColor');
+  function syncMeta(){ if(meta) meta.setAttribute('content', root.getAttribute('data-theme')==='dark' ? '#0d0f13' : '#EDEFE9'); }
   try{ if(localStorage.getItem(KEY)==='dark') root.setAttribute('data-theme','dark'); }catch(e){}
+  syncMeta();
   var btn=document.getElementById('themeToggle');
   if(btn){ btn.addEventListener('click',function(){
     var dark=root.getAttribute('data-theme')==='dark';
     if(dark){ root.removeAttribute('data-theme'); try{localStorage.setItem(KEY,'lime');}catch(e){} }
     else{ root.setAttribute('data-theme','dark'); try{localStorage.setItem(KEY,'dark');}catch(e){} }
+    syncMeta();
   });}
   // ---- waitlist forms ----
   var EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
