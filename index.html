@@ -181,6 +181,9 @@
 :root[data-theme="dark"] .kx-themebtn .ic-sun{display:block;}
 :root[data-theme="dark"] .kx-themebtn .ic-moon{display:none;}
 
+/* ---------- pre-launch badge ---------- */
+@keyframes kxPing{0%{transform:scale(1);opacity:0.55;}70%,100%{transform:scale(2.6);opacity:0;}}
+
 /* ---------- responsive ---------- */
 @media (max-width:980px){
   [style*="grid-template-columns:1.05fr 0.95fr"],
@@ -243,9 +246,15 @@
 
       <!-- left: copy -->
       <div style="min-width:0;">
-        <div style="display:inline-flex; align-items:center; gap:8px; height:30px; padding:0 13px; border-radius:999px; background:var(--c21,rgba(119,185,0,0.1)); border:1px solid var(--c1,rgba(119,185,0,0.28));">
-          <span style="width:6px; height:6px; border-radius:50%; background:var(--c16,#77B900); box-shadow:0 0 10px var(--c15,#4F7A00);"></span>
-          <span style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px; color:var(--c15,#4F7A00); text-transform:uppercase;">On-device AI reader · in pre-launch</span>
+        <div style="display:inline-flex; align-items:center; gap:9px; height:32px; padding:0 13px 0 4px; border-radius:999px; background:var(--c21,rgba(119,185,0,0.1)); border:1px solid var(--c1,rgba(119,185,0,0.28));">
+          <span style="display:inline-flex; align-items:center; gap:6px; height:24px; padding:0 10px; border-radius:999px; background:var(--c16,#77B900);">
+            <span style="position:relative; display:inline-flex; width:6px; height:6px;">
+              <span style="position:absolute; inset:0; border-radius:50%; background:var(--c17,#15210A); animation:kxPing 1.9s cubic-bezier(0,0,0.2,1) infinite;"></span>
+              <span style="position:relative; width:6px; height:6px; border-radius:50%; background:var(--c17,#15210A);"></span>
+            </span>
+            <span style="font-family:'DM Mono',monospace; font-size:10px; font-weight:500; letter-spacing:1.2px; color:var(--c17,#15210A); text-transform:uppercase;">Pre-launch</span>
+          </span>
+          <span style="font-family:'Outfit',sans-serif; font-size:13px; font-weight:500; letter-spacing:0.2px; color:var(--c2,#4B5560);">On-device AI reader</span>
         </div>
 
         <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:60px; line-height:1.04; letter-spacing:-2px; color:var(--c3,#1B1A14); margin:22px 0 0;">Read it once.<br>Remember it<br><span style="color:var(--c15,#4F7A00);">for good.</span></h1>
