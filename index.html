@@ -4,806 +4,517 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Krixo - Read it once. Remember it for good.</title>
-<meta name="description" content="Krixo turns your PDFs, EPUBs and web articles into lasting knowledge. Every highlight becomes a spaced-repetition quiz card. Your book files never leave your device, and the search index lives on your phone. Join the waitlist.">
-<meta name="theme-color" content="#EDEFE9" id="metaThemeColor">
+<meta name="description" content="Krixo is an on-device AI reader. Import any PDF, EPUB or link, highlight what matters, and every highlight becomes a spaced-repetition card so you actually remember it.">
+<meta name="theme-color" content="#EDF1E3" id="metaThemeColor">
+<link rel="canonical" href="https://krixo.in/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Krixo - Read it once. Remember it for good.">
-<meta property="og:description" content="A private AI reader that turns everything you read into lasting knowledge with spaced repetition. Your book files never leave your device.">
 <meta property="og:url" content="https://krixo.in/">
+<meta property="og:title" content="Krixo - Read it once. Remember it for good.">
+<meta property="og:description" content="An on-device AI reader. Every highlight becomes a spaced-repetition card.">
 <meta property="og:image" content="https://krixo.in/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Krixo - Read it once. Remember it for good.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Krixo - Read it once. Remember it for good.">
-<meta name="twitter:description" content="A private AI reader with built-in spaced repetition. Your book files never leave your device.">
+<meta name="twitter:description" content="An on-device AI reader. Every highlight becomes a spaced-repetition card.">
 <meta name="twitter:image" content="https://krixo.in/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Lora:ital,wght@0,400;0,500;0,700;1,400&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* LIME (default) */
+/* ---------- tokens: page chrome (Lime default / Onyx dark) ---------- */
 :root{
-      --c1:rgba(119,185,0,0.28);
-      --c2:#4B5560;
-      --c3:#1B1A14;
-      --c4:rgba(119,185,0,0.4);
-      --c5:rgba(119,185,0,0.34);
-      --c6:rgba(20,28,12,0.10);
-      --c7:#98A0A8;
-      --c8:rgba(119,185,0,0.55);
-      --c9:#EDEFE9;
-      --c10:#171A14;
-      --c11:rgba(255,255,255,0.82);
-      --c12:rgba(20,28,12,0.06);
-      --c13:#FFFFFF;
-      --c14:rgba(20,28,12,0.09);
-      --c15:#4F7A00;
-      --c16:#77B900;
-      --c17:#15210A;
-      --c18:#FFFFFF;
-      --c19:#F6F8F1;
-      --c20:rgba(119,185,0,0.13);
-      --c21:rgba(119,185,0,0.1);
-      --c22:#FFFFFF;
-      --c23:rgba(20,28,12,0.12);
-      --c24:#0C3A33;
-      --c25:#79828A;
-      --c26:#C7CBC0;
-      --c27:rgba(20,28,12,0.1);
-      --c28:rgba(20,28,12,0.16);
-      --c29:rgba(119,185,0,0.16);
-      --c30:#FFFFFF;
-      --c31:rgba(119,185,0,0.26);
-      --c32:#FFFFFF;
-      --c33:rgba(20,28,12,0.07);
-      --c34:rgba(20,28,12,0.08);
-      --c35:#79828A;
-      --c36:#6E8A3A;
-      --c37:#20201A;
-      --c38:#EDF1E3;
-      --c39:#79828A;
-      --c40:rgba(20,28,12,0.3);
-      --c41:#F6F8F1;
-      --c42:#3C4640;
-      --c43:rgba(20,28,12,0.14);
-      --c44:rgba(20,28,12,0.09);
-      --c45:#E2E5DB;
-      --c46:#FAF8F2;
-      --c47:#20201A;
-      --c48:#6E8A3A;
-      --c49:#4B5560;
-      --c50:#F2F7E8;
-      --c51:rgba(20,28,12,0.12);
-      --c52:#233A0A;
-      --c53:#3A4038;
-      --c54:rgba(119,185,0,0.12);
-      --c55:rgba(119,185,0,0.3);
-      --c56:rgba(20,28,12,0.05);
-      --c57:#F3F5EE;
-      --c58:#2C3530;
-      --c59:rgba(119,185,0,0.18);
-      --c60:rgba(20,28,12,0.16);
-      --c61:rgba(20,28,12,0.14);
-      --c62:#FBF7E8;
-      --c63:#F3F0E6;
-      --c64:#E4E7DD;
-      --c65:#A8AEA4;
+  --bg:#EDF1E3; --paper:#F5F7EF; --paper3:#FFFFFF;
+  --ink:#171A14; --ink2:#4B5560; --ink3:#69727B; --muted:#79828A; --muted2:#98A0A8;
+  --rule:rgba(20,28,12,0.10); --rule2:rgba(20,28,12,0.06);
+  --signal:#77B900; --signalD:#4F7A00; --signalBg:rgba(119,185,0,0.15); --onAccent:#15210A;
+  --navbg:rgba(245,247,239,0.82); --footbg:#E4E7DD; --copy:#A8AEA4;
+  --backdrop:radial-gradient(120% 90% at 50% -10%, #F4F6EC 0%, #E9EDDE 55%, #E0E5D3 100%);
+  --glow:0 42px 100px rgba(20,28,12,0.40), 0 0 70px rgba(119,185,0,0.12);
+  --shadow:0 42px 100px rgba(20,28,12,0.40);
+  --ps:1;
 }
-
-/* DARK */
 :root[data-theme="dark"]{
-      --c1:rgba(245,182,58,0.28);
-      --c2:#A7ABB3;
-      --c3:#F4ECDD;
-      --c4:rgba(245,182,58,0.4);
-      --c5:rgba(245,182,58,0.34);
-      --c6:rgba(0,0,0,0.45);
-      --c7:#6E747F;
-      --c8:rgba(245,182,58,0.55);
-      --c9:#0d0f13;
-      --c10:#F2F4F8;
-      --c11:rgba(13,15,19,0.72);
-      --c12:rgba(255,255,255,0.06);
-      --c13:#0E1116;
-      --c14:rgba(255,255,255,0.09);
-      --c15:#F5B63A;
-      --c16:#F5B63A;
-      --c17:#1a1205;
-      --c18:#24272e;
-      --c19:#181a20;
-      --c20:rgba(245,182,58,0.13);
-      --c21:rgba(245,182,58,0.1);
-      --c22:#15171c;
-      --c23:rgba(255,255,255,0.12);
-      --c24:#EAFBF7;
-      --c25:#86868C;
-      --c26:#3a3f48;
-      --c27:rgba(255,255,255,0.1);
-      --c28:rgba(0,0,0,0.6);
-      --c29:rgba(245,182,58,0.16);
-      --c30:#101218;
-      --c31:rgba(245,182,58,0.26);
-      --c32:#16181D;
-      --c33:rgba(255,255,255,0.07);
-      --c34:rgba(255,255,255,0.08);
-      --c35:#9AA0AB;
-      --c36:#9A875E;
-      --c37:#EDE7DA;
-      --c38:#1b1e25;
-      --c39:#8b919b;
-      --c40:rgba(255,255,255,0.3);
-      --c41:#0f1116;
-      --c42:#C9CDD4;
-      --c43:rgba(0,0,0,0.55);
-      --c44:rgba(0,0,0,0.4);
-      --c45:#23262d;
-      --c46:#100f0c;
-      --c47:#E8E9EC;
-      --c48:#C79A4B;
-      --c49:#C2C0B8;
-      --c50:#16140f;
-      --c51:rgba(0,0,0,0.5);
-      --c52:#F4E9D4;
-      --c53:#D6D2C6;
-      --c54:rgba(245,182,58,0.12);
-      --c55:rgba(245,182,58,0.3);
-      --c56:rgba(255,255,255,0.05);
-      --c57:#1c1f26;
-      --c58:#DCDEE4;
-      --c59:rgba(245,182,58,0.18);
-      --c60:rgba(255,255,255,0.16);
-      --c61:rgba(255,255,255,0.14);
-      --c62:#1d1c16;
-      --c63:#2a2418;
-      --c64:#0b0d11;
-      --c65:#52575f;
+  --bg:#0B0B0D; --paper:#12151A; --paper3:#0E1116;
+  --ink:#F2F4F8; --ink2:#A7ABB3; --ink3:#9AA0AB; --muted:#86868C; --muted2:#6E747F;
+  --rule:rgba(255,255,255,0.10); --rule2:rgba(255,255,255,0.06);
+  --signal:#F5B63A; --signalD:#F5B63A; --signalBg:rgba(245,182,58,0.13); --onAccent:#1a1205;
+  --navbg:rgba(11,11,13,0.75); --footbg:#08080A; --copy:#52575F;
+  --backdrop:radial-gradient(120% 90% at 50% -10%, #16181F 0%, #0E1014 55%, #0B0B0D 100%);
+  --glow:0 42px 100px rgba(0,0,0,0.6), 0 0 70px rgba(245,182,58,0.10);
+  --shadow:0 42px 100px rgba(0,0,0,0.6);
 }
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink2);
+  font-family:'Outfit',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
 
-*{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{margin:0;}
-    ::selection{background:var(--c1,rgba(119,185,0,0.28));color:#fff;}
-    @keyframes kxFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
-    @keyframes kxPulse{0%,100%{opacity:0.5;}50%{opacity:0.9;}}
-    @keyframes kxRing{from{stroke-dashoffset:302;}to{stroke-dashoffset:64;}}
-    @keyframes kxWave{0%,100%{transform:scaleY(0.35);}50%{transform:scaleY(1);}}
-    .kx-link{color:var(--c2,#4B5560);text-decoration:none;font-size:14.5px;font-weight:500;transition:color .18s;}
-    .kx-link:hover{color:var(--c3,#1B1A14);}
-    .kx-navcta{transition:transform .18s, box-shadow .18s;}
-    .kx-navcta:hover{transform:translateY(-1px);box-shadow:0 10px 26px var(--c4,rgba(119,185,0,0.4));}
-    .kx-card{transition:transform .25s, border-color .25s, box-shadow .25s;}
-    .kx-card:hover{transform:translateY(-4px);border-color:var(--c5,rgba(119,185,0,0.34));box-shadow:0 22px 50px var(--c6,rgba(20,28,12,0.10));}
-    .kx-input::placeholder{color:var(--c7,#98A0A8);}
-    .kx-input:focus{outline:none;border-color:var(--c8,rgba(119,185,0,0.55))!important;}
-    .kx-foot:hover{color:var(--c3,#1B1A14)!important;}
-/* ---------- theme toggle button ---------- */
-.kx-themebtn{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:11px;
-  background:var(--c13);border:1px solid var(--c14);color:var(--c15);cursor:pointer;flex:none;transition:transform .18s,border-color .18s;padding:0;}
-.kx-themebtn:hover{transform:translateY(-1px);border-color:var(--c5);}
-.kx-themebtn .ic-sun{display:none;}
-:root[data-theme="dark"] .kx-themebtn .ic-sun{display:block;}
-:root[data-theme="dark"] .kx-themebtn .ic-moon{display:none;}
+/* ---------- type ---------- */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',ui-monospace,monospace;
+  font-size:12px;letter-spacing:3px;color:var(--signalD);text-transform:uppercase;margin-bottom:16px}
+.eyebrow .rule{width:26px;height:2px;background:var(--signal);flex:none}
+.dtitle{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:44px;line-height:1.08;
+  letter-spacing:-0.5px;color:var(--ink);margin:0}
+.dsub{font-size:17.5px;line-height:1.55;color:var(--ink3);margin:16px 0 0;max-width:34em}
 
-/* ---------- pre-launch badge ---------- */
-@keyframes kxPing{0%{transform:scale(1);opacity:0.55;}70%,100%{transform:scale(2.6);opacity:0;}}
+/* ---------- phone ---------- */
+.pw{width:calc(388px * var(--ps));height:calc(788px * var(--ps));flex:none}
+.pf{width:388px;height:788px;border-radius:46px;background:#0c0e08;padding:13px;
+  border:1px solid #2c2f24;box-shadow:var(--shadow);transform:scale(var(--ps));transform-origin:0 0}
+.pf.glow{box-shadow:var(--glow)}
+.ps{width:360px;height:760px;border-radius:34px;overflow:hidden;background:#EDF1E3;position:relative}
 
-/* ---------- footer links: keep on one line ---------- */
-.footer-links{flex-wrap:nowrap!important;}
-.footer-links a{white-space:nowrap;}
-@media (max-width:560px){.footer-links{gap:12px!important;}.footer-links a{font-size:12px!important;}}
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:var(--navbg);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--rule2)}
+.navin{display:flex;align-items:center;justify-content:space-between;padding:15px 32px;max-width:1180px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brandbox{width:34px;height:34px;border-radius:10px;background:var(--paper3);border:1px solid var(--rule);
+  display:grid;place-items:center}
+.wordmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.5px;color:var(--ink)}
+.wordmark .x{color:var(--signal)}
+.navr{display:flex;align-items:center;gap:26px}
+.kx-link{color:var(--ink2);text-decoration:none;font-size:14.5px;font-weight:500}
+.kx-link:hover{color:var(--signalD)}
+.kx-cta{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 20px;border:0;
+  border-radius:12px;background:var(--signal);color:var(--onAccent);font-family:'Outfit',sans-serif;
+  font-weight:600;font-size:14.5px;text-decoration:none;cursor:pointer;white-space:nowrap;
+  transition:transform .16s}
+.kx-cta:hover{transform:translateY(-1px)}
+.navr .kx-cta{height:40px;padding:0 18px}
+.themebtn{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:11px;
+  background:var(--paper3);border:1px solid var(--rule);color:var(--signalD);cursor:pointer;flex:none;padding:0;
+  transition:transform .18s,border-color .18s}
+.themebtn:hover{transform:translateY(-1px);border-color:var(--signal)}
+.themebtn .ic-sun{display:none}
+:root[data-theme="dark"] .themebtn .ic-sun{display:block}
+:root[data-theme="dark"] .themebtn .ic-moon{display:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--backdrop);border-bottom:1px solid var(--rule2);overflow:hidden}
+.heroin{max-width:1180px;margin:0 auto;padding:64px 32px 0;display:grid;
+  grid-template-columns:1fr auto;gap:56px;align-items:center}
+.h1{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:66px;line-height:1.02;
+  letter-spacing:-1.5px;color:var(--ink);margin:22px 0 0}
+.h1 .accent{color:var(--signalD)}
+.herosub{font-size:19px;line-height:1.55;color:var(--ink3);margin:20px 0 0;max-width:32em}
+.badge{display:inline-flex;align-items:center;gap:9px;height:32px;padding:0 15px;border-radius:999px;
+  background:var(--signalBg);border:1px solid var(--rule)}
+.ping{position:relative;display:inline-flex;width:6px;height:6px}
+.ping i{position:absolute;inset:0;border-radius:50%;background:var(--signal);animation:kxPing 1.9s cubic-bezier(0,0,0.2,1) infinite}
+.ping b{position:relative;width:6px;height:6px;border-radius:50%;background:var(--signal)}
+@keyframes kxPing{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(2.6);opacity:0}}
+.badge .lbl{font-family:'DM Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:1.2px;
+  color:var(--signalD);text-transform:uppercase}
+.badge .div{width:1px;height:13px;background:var(--rule)}
+.badge .desc{font-size:13px;font-weight:500;color:var(--ink2)}
+.phclip{margin-bottom:-120px}
+
+/* ---------- waitlist ---------- */
+.wl-region{margin-top:30px}
+.wl-formEl{display:flex;gap:10px;max-width:470px}
+.hp{display:none}
+.kx-input{flex:1;min-width:0;height:52px;padding:0 16px;border-radius:12px;background:var(--paper3);
+  border:1px solid var(--rule);color:var(--ink);font-family:'Outfit',sans-serif;font-size:15px;outline:none}
+.kx-input::placeholder{color:var(--muted2)}
+.kx-input:focus{border-color:var(--signal)}
+.wl-formEl .kx-cta{height:52px;flex:none}
+.wl-note{font-size:13px;color:var(--muted);margin-top:12px}
+.wl-done-wrap{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:12px;
+  background:var(--signalBg);border:1px solid var(--rule);color:var(--signalD);font-size:15px;font-weight:500}
+
+/* ---------- video ---------- */
+.video{padding:110px 0 96px;background:var(--bg)}
+.vhead{text-align:center;margin-bottom:44px;display:flex;flex-direction:column;align-items:center}
+.vframe{position:relative;max-width:1000px;margin:0 auto;border-radius:20px;overflow:hidden;
+  border:1px solid var(--rule);background:#0c0e08;box-shadow:var(--shadow);aspect-ratio:16/9}
+.vframe img,.vframe iframe{display:block;width:100%;height:100%;border:0}
+.vbtn{position:absolute;inset:0;display:grid;place-items:center;background:transparent;border:0;cursor:pointer;padding:0}
+.vbtn .disc{width:84px;height:84px;border-radius:999px;background:var(--signal);display:grid;place-items:center;
+  box-shadow:0 12px 40px rgba(0,0,0,.35);transition:transform .18s}
+.vbtn:hover .disc{transform:scale(1.07)}
+.vcap{text-align:center;font-family:'DM Mono',monospace;font-size:11.5px;letter-spacing:2px;
+  color:var(--muted);text-transform:uppercase;margin-top:22px}
+
+/* ---------- features ---------- */
+.feat{max-width:1180px;margin:0 auto;padding:56px 32px;display:grid;
+  grid-template-columns:auto 1fr;gap:72px;align-items:center}
+.feat.flip{grid-template-columns:1fr auto}
+.feat.flip .txtcol{order:1}
+
+/* ---------- privacy ---------- */
+.privacy{background:var(--backdrop);border-top:1px solid var(--rule2);border-bottom:1px solid var(--rule2);
+  padding:96px 0;text-align:center}
+.lockbox{width:90px;height:90px;border-radius:26px;background:var(--signalBg);display:grid;place-items:center;
+  margin:0 auto 28px;color:var(--signalD)}
+.ptitle{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:44px;letter-spacing:-0.5px;
+  color:var(--ink);margin:0 auto;max-width:820px;line-height:1.1}
+.psub{font-size:17px;color:var(--ink3);margin:16px auto 0;max-width:640px;line-height:1.55}
+.stats{display:flex;justify-content:center;gap:56px;margin-top:48px;flex-wrap:wrap}
+.stat .n{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:30px;color:var(--signalD)}
+.stat .d{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-top:6px;letter-spacing:.4px}
+
+/* ---------- pricing ---------- */
+.pricing{padding:100px 0}
+.phead{text-align:center;display:flex;flex-direction:column;align-items:center;margin-bottom:48px}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:0 auto}
+.plan{background:var(--paper);border:1px solid var(--rule);border-radius:20px;padding:32px}
+.plan.pro{border-color:var(--signal);position:relative}
+.plan .pname{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.plan .price{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:38px;color:var(--ink);margin:12px 0 4px}
+.plan .per{font-size:13.5px;color:var(--muted)}
+.plan ul{list-style:none;margin:22px 0 0;padding:0}
+.plan li{display:flex;gap:11px;align-items:flex-start;margin:11px 0;font-size:14.5px;color:var(--ink2);line-height:1.5}
+.plan li svg{flex:none;margin-top:3px;color:var(--signal)}
+.tag{position:absolute;top:-11px;right:24px;background:var(--signal);color:var(--onAccent);
+  font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;
+  padding:5px 11px;border-radius:999px}
+
+/* ---------- final cta ---------- */
+.final{background:var(--backdrop);border-top:1px solid var(--rule2);padding:96px 0;text-align:center}
+.final .wl-region{display:flex;flex-direction:column;align-items:center}
+.final .wl-formEl{width:100%;max-width:470px}
+.final .kx-input,.final .wl-formEl .kx-cta{height:54px}
+
+/* ---------- footer ---------- */
+.foot{background:var(--footbg);border-top:1px solid var(--rule2)}
+.footin{max-width:1180px;margin:0 auto;padding:40px 32px;display:flex;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footbrand{display:flex;align-items:center;gap:10px}
+.foottag{font-size:12.5px;color:var(--muted2);margin-left:6px}
+.footer-links{display:flex;gap:18px;align-items:center;flex-wrap:nowrap}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:13.5px;white-space:nowrap}
+.footer-links a:hover{color:var(--signalD)}
+.copy{font-size:12.5px;color:var(--copy)}
 
 /* ---------- responsive ---------- */
-@media (max-width:980px){
-  [style*="grid-template-columns:1.05fr 0.95fr"],
-  [style*="grid-template-columns:0.95fr 1.05fr"],
-  [style*="grid-template-columns:1fr 1fr"],
-  [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important;}
-  [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr)!important;}
-  [style*="gap:56px"]{gap:34px!important;}
-  [style*="gap:48px"]{gap:30px!important;}
+@media (max-width:1180px){:root{--ps:.86}}
+@media (max-width:1080px){
+  .heroin{grid-template-columns:1fr;padding-top:52px;gap:34px;justify-items:center;text-align:center}
+  .heroin .txtcol{display:flex;flex-direction:column;align-items:center}
+  .herosub{margin-left:auto;margin-right:auto}
+  .h1{font-size:52px}
+  .feat,.feat.flip{grid-template-columns:1fr;gap:36px;justify-items:center;text-align:center}
+  .feat .phcol,.feat .txtcol{order:unset !important}
+  .feat .txtcol{display:flex;flex-direction:column;align-items:center}
+  .dsub{margin-left:auto;margin-right:auto}
+  .phclip{margin-bottom:-90px}
 }
+@media (max-width:980px){:root{--ps:.78}.plans{grid-template-columns:1fr}}
 @media (max-width:760px){
-  .kx-link{display:none!important;}
-  [style*="font-size:60px"]{font-size:38px!important;letter-spacing:-1px!important;}
-  [style*="font-size:46px"]{font-size:31px!important;}
-  [style*="font-size:44px"]{font-size:30px!important;}
-  [style*="font-size:43px"]{font-size:29px!important;}
-  [style*="font-size:40px"]{font-size:27px!important;}
-  [style*="padding:72px 32px 84px"]{padding:48px 20px 56px!important;}
-  [style*="padding:96px 32px"]{padding:60px 20px!important;}
-  [style*="padding:90px 32px"]{padding:56px 20px!important;}
-  [style*="padding:64px 32px"]{padding:44px 20px!important;}
-  [style*="padding:40px 32px"]{padding:28px 20px!important;}
-  [style*="padding:30px 32px"]{padding:22px 20px!important;}
-  [style*="padding:15px 32px"]{padding:13px 18px!important;}
+  .navr .kx-link{display:none}
+  .h1{font-size:40px;letter-spacing:-1px}
+  .dtitle,.ptitle{font-size:31px}
+  .wrap,.navin,.feat,.footin,.heroin{padding-left:20px;padding-right:20px}
+  .video{padding:72px 0 64px}
+  .privacy,.final,.pricing{padding:64px 0}
+  .stats{gap:32px}
+  .vbtn .disc{width:64px;height:64px}
 }
 @media (max-width:560px){
-  [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:1fr!important;}
-  .wl-formEl{flex-direction:column!important;width:100%!important;max-width:100%!important;align-items:stretch!important;}
-  .wl-formEl .kx-input,.wl-formEl button{width:100%!important;flex:none!important;}
+  :root{--ps:.72}
+  .wl-formEl{flex-direction:column;max-width:100%;width:100%}
+  .wl-formEl .kx-input,.wl-formEl .kx-cta{width:100%;flex:none}
+  .footin{justify-content:center;text-align:center}
+  .footer-links{gap:12px;flex-wrap:wrap;justify-content:center}
+  .footer-links a{font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .ping i{animation:none}
+  *{transition:none !important}
 }
 </style>
 </head>
 <body>
-<div style="min-width:100%; overflow-x:hidden; background:var(--c9,#EDEFE9); color:var(--c10,#171A14); font-family:'Outfit',system-ui,sans-serif; -webkit-font-smoothing:antialiased;">
 
-  <!-- ===================== NAV ===================== -->
-  <div style="position:sticky; top:0; z-index:50; background:var(--c11,rgba(255,255,255,0.82)); backdrop-filter:blur(16px); border-bottom:1px solid var(--c12,rgba(20,28,12,0.06));">
-    <div style="max-width:1180px; margin:0 auto; padding:15px 32px; display:flex; align-items:center; justify-content:space-between;">
-      <div style="display:flex; align-items:center; gap:11px;">
-        <div style="width:34px; height:34px; border-radius:10px; background:var(--c13,#FFFFFF); border:1px solid var(--c14,rgba(20,28,12,0.09)); display:flex; align-items:center; justify-content:center;">
-          <svg width="19" height="19" viewBox="0 0 48 48" fill="none"><path d="M13 14l22 20" stroke="var(--c15,#4F7A00)" stroke-width="4.4" stroke-linecap="round"/><path d="M35 14L13 34" stroke="var(--c10,#171A14)" stroke-width="4.4" stroke-linecap="round"/></svg>
-        </div>
-        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px; letter-spacing:-0.5px;"><span style="color:var(--c10,#171A14);">kri</span><span style="color:var(--c15,#4F7A00);">x</span><span style="color:var(--c10,#171A14);">o</span></span>
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="navin">
+    <a class="brand" href="/">
+      <div class="brandbox"><svg width="19" height="19" viewBox="0 0 48 48" fill="none"><path d="M13 14l22 20" stroke="var(--signal)" stroke-width="4.4" stroke-linecap="round"/><path d="M35 14L13 34" stroke="var(--ink)" stroke-width="4.4" stroke-linecap="round"/></svg></div>
+      <span class="wordmark">kri<span class="x">x</span>o</span>
+    </a>
+    <nav class="navr">
+      <a class="kx-link" href="#watch">Watch</a>
+      <a class="kx-link" href="#read">Read</a>
+      <a class="kx-link" href="#remember">Remember</a>
+      <a class="kx-link" href="#privacy">Privacy</a>
+      <a class="kx-link" href="#pricing">Pricing</a>
+      <button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme" title="Switch theme">
+        <svg class="ic-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg>
+        <svg class="ic-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="kx-cta" href="#waitlist">Join the waitlist</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="heroin">
+    <div class="txtcol">
+      <div class="badge">
+        <span class="ping"><i></i><b></b></span>
+        <span class="lbl">Pre-launch</span>
+        <span class="div"></span>
+        <span class="desc">On-device AI reader</span>
       </div>
-      <div style="display:flex; align-items:center; gap:30px;">
-        <a class="kx-link" href="#retain">Retention</a>
-        <a class="kx-link" href="#ask">Ask AI</a>
-        <a class="kx-link" href="#privacy">Privacy</a>
-        <a class="kx-link" href="#pricing">Pricing</a>
-        <button id="themeToggle" class="kx-themebtn" type="button" aria-label="Switch theme" title="Switch theme"><svg class="ic-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg><svg class="ic-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><a class="kx-navcta" href="#waitlist" style="display:inline-flex; align-items:center; height:40px; padding:0 18px; border-radius:11px; background:var(--c16,#77B900); color:var(--c17,#15210A); font-weight:600; font-size:14px; text-decoration:none;">Join the waitlist</a>
+      <h1 class="h1">Read it once.<br><span class="accent">Remember it for good.</span></h1>
+      <p class="herosub">Import any PDF, EPUB or link. Highlight what matters. Krixo turns every highlight into a spaced-repetition card and shows it back to you right before you would have forgotten.</p>
+      <div class="wl-region">
+      <div class="wl-form-wrap">
+        <form class="wl-formEl" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="waitlist">
+          <input type="hidden" name="source" value="hero">
+          <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
+          <input class="kx-input wl-email" type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
+          <button class="kx-cta" type="submit">Join the waitlist</button>
+        </form>
+        <div class="wl-note">Android first. iOS and desktop next. No spam, one launch email.</div>
+      </div>
+      <div class="wl-done-wrap" hidden>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        <span>You're on the list. We'll email you once, at launch.</span>
+      </div>
+    </div>
+    </div>
+    <div class="phcol phclip"><div class="pw"><div class="pf glow"><div class="ps"><div style="width: 100%; height: 100%; background: rgb(245, 247, 239); display: flex; flex-direction: column;"><div style="height: 32px; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; flex-shrink: 0;"><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(23, 26, 20);">9:41</span><div style="display: flex; align-items: center; gap: 5px;"><svg width="16" height="11" viewBox="0 0 16 11" fill="#171A14"><rect x="0" y="7" width="3" height="4" rx="1"></rect><rect x="4" y="5" width="3" height="6" rx="1"></rect><rect x="8" y="2.5" width="3" height="8.5" rx="1"></rect><rect x="12" y="0" width="3" height="11" rx="1"></rect></svg><svg width="22" height="11" viewBox="0 0 22 11" fill="none"><rect x="0.5" y="0.5" width="18" height="10" rx="2.5" stroke="#171A14" opacity="0.5"></rect><rect x="2" y="2" width="13" height="7" rx="1" fill="#171A14"></rect><rect x="20" y="3.5" width="1.5" height="4" rx="0.75" fill="#171A14" opacity="0.5"></rect></svg></div></div><div style="height: 48px; display: flex; align-items: center; padding: 0px 18px; opacity: 1; transform: translateY(0px);"><div style="width: 38px; height: 38px; border-radius: 999px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center; font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 15px; color: rgb(23, 26, 20);">A</div><div style="flex: 1 1 0%; display: flex; justify-content: center;"><div style="display: flex; align-items: center; gap: 10px;"><div><div style="font-family: &quot;Space Grotesk&quot;, system-ui, sans-serif; font-weight: 700; font-size: 22px; color: rgb(23, 26, 20); letter-spacing: -0.6px; line-height: 1;">kri<span style="color: rgb(119, 185, 0);">x</span>o</div></div></div></div><div style="width: 38px; height: 38px; border-radius: 999px; background: rgba(119, 185, 0, 0.15); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="2.4"><path d="M12 5v14M5 12h14"></path></svg></div></div><div style="padding: 10px 18px 0px; opacity: 1; transform: translateY(0px);"><div style="background: rgb(245, 247, 239); border-radius: 24px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 20px; box-shadow: rgba(20, 28, 12, 0.07) 0px 12px 26px;"><div style="display: flex; align-items: center; justify-content: space-between;"><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; letter-spacing: 1.8px; color: rgb(105, 114, 123); text-transform: uppercase;">Continue</div><div style="display: flex; gap: 8px;"><div style="width: 34px; height: 34px; border-radius: 999px; background: rgba(119, 185, 0, 0.15); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="1.9"><path d="M3 18v-5a9 9 0 0118 0v5"></path><path d="M18 14h2a1 1 0 011 1v3a1 1 0 01-1 1h-2zM6 14H4a1 1 0 00-1 1v3a1 1 0 001 1h2z"></path></svg></div><div style="width: 34px; height: 34px; border-radius: 999px; background: rgba(119, 185, 0, 0.15); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="1.8"><path d="M5 3h9l5 5v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4a1 1 0 011-1z"></path><path d="M14 3v5h5"></path><path d="M9.6 12.6l.9 2 2 .9-2 .9-.9 2-.9-2-2-.9 2-.9z"></path></svg></div></div></div><div style="display: flex; gap: 16px; margin-top: 16px; align-items: center;"><div style="box-shadow: rgba(20, 28, 12, 0.28) 0px 12px 26px; border-radius: 8px;"><div style="width: 92px; height: 132px; border-radius: 8px; background: rgb(21, 37, 52); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/stillpoint.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="flex: 1 1 0%; min-width: 0px;"><div style="font-family: Lora, Georgia, serif; font-weight: 700; font-size: 20px; color: rgb(23, 26, 20); line-height: 1.2;">The Still Point</div><div style="font-family: Outfit, system-ui, sans-serif; font-size: 13px; color: rgb(121, 130, 138); margin-top: 3px;">Marguerite Adler</div><div style="margin-top: 14px; font-family: Lora, Georgia, serif; font-weight: 700; font-size: 15px; color: rgb(75, 85, 96);">38%<span style="font-family: Outfit, system-ui, sans-serif; font-weight: 400; font-size: 12px; color: rgb(121, 130, 138);">  ·  page 34</span></div><div style="height: 6px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); overflow: hidden; margin-top: 8px;"><div style="width: 38%; height: 100%; background: rgb(119, 185, 0); border-radius: 999px;"></div></div></div></div><div style="height: 52px; border-radius: 15px; background: rgba(119, 185, 0, 0.15); border: 1px solid rgba(20, 28, 12, 0.1); display: flex; align-items: center; justify-content: center; gap: 9px; margin-top: 18px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#171A14"><path d="M8 5v14l11-7z"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 15px; color: rgb(23, 26, 20);">Resume reading</span></div></div></div><div style="padding: 16px 22px 0px; opacity: 1; transform: translateY(0px);"><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; letter-spacing: 1.6px; color: rgb(121, 130, 138); text-transform: uppercase;">Ask your library</div></div><div style="display: flex; gap: 10px; padding: 8px 20px 0px; opacity: 1; transform: translateY(0px);"><div style="flex: 1 1 0%; background: rgb(255, 255, 255); border-radius: 14px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 13px 14px; display: flex; align-items: center; justify-content: center; gap: 8px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="#171A14"><path d="M12 3l1.7 5.1L19 10l-5.3 1.9L12 17l-1.7-5.1L5 10l5.3-1.9z"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 14px; color: rgb(23, 26, 20);">Ask the Library</span></div><div style="flex: 1 1 0%; background: rgb(255, 255, 255); border-radius: 14px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 13px 8px; display: flex; align-items: center; justify-content: center; gap: 6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4-4"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(23, 26, 20);">X-ray</span></div></div><div style="display: flex; gap: 10px; padding: 10px 20px 0px; opacity: 1; transform: translateY(0px);"><div style="flex: 1 1 0%; background: rgb(255, 255, 255); border-radius: 16px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 11px 10px; display: flex; flex-direction: column; align-items: center; gap: 7px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="1.9"><path d="M12 2v1.6M4.6 5.6l1.1 1.1M19.4 5.6l-1.1 1.1M2.5 12H4M20 12h1.5" opacity="0.55"></path><path d="M15.5 13A5 5 0 1 0 8.5 13c.8.7 1.2 1.5 1.3 2.4l.1.8h4.2l.1-.8c.1-.9.5-1.7 1.3-2.4z"></path><path d="M9.7 18.6h4.6M10.8 21.1h2.4"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 12.5px; color: rgb(23, 26, 20); text-align: center; line-height: 1.28;">9 Concepts &amp; 24 Words</span></div><div style="flex: 1 1 0%; background: rgb(255, 255, 255); border-radius: 16px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 11px 10px; display: flex; flex-direction: column; align-items: center; gap: 7px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="2"><path d="M8 3H6a2 2 0 00-2 2v14a2 2 0 002 2h8a2 2 0 002-2v-2"></path><path d="M14 3h4a2 2 0 012 2v10"></path><path d="M9 9h3M9 13h6M9 17h4"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(23, 26, 20); text-align: center;">Quiz 3 cards</span></div></div><div style="padding: 18px 20px 0px; opacity: 1; transform: translateY(0px); display: flex; align-items: center; justify-content: space-between;"><div style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 17px; color: rgb(23, 26, 20);">Your library</div><div style="display: flex; align-items: center; gap: 4px; font-family: Outfit, system-ui, sans-serif; font-weight: 700; font-size: 12.5px; color: rgb(23, 26, 20);">Browse all <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="2.4"><path d="M9 18l6-6-6-6"></path></svg></div></div><div style="display: flex; gap: 12px; padding: 12px 0px 0px 20px; opacity: 1; transform: translateY(0px); overflow: hidden;"><div style="flex-shrink: 0;"><div style="box-shadow: rgba(20, 28, 12, 0.18) 0px 10px 22px; border-radius: 8px;"><div style="width: 66px; height: 96px; border-radius: 8px; background: rgb(22, 24, 29); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/tech.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="height: 3px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); overflow: hidden; margin-top: 7px;"><div style="width: 62%; height: 100%; background: rgb(119, 185, 0);"></div></div></div><div style="flex-shrink: 0;"><div style="box-shadow: rgba(20, 28, 12, 0.18) 0px 10px 22px; border-radius: 8px;"><div style="width: 66px; height: 96px; border-radius: 8px; background: rgb(10, 26, 48); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/science.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="height: 3px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); overflow: hidden; margin-top: 7px;"><div style="width: 20%; height: 100%; background: rgb(119, 185, 0);"></div></div></div><div style="flex-shrink: 0;"><div style="box-shadow: rgba(20, 28, 12, 0.18) 0px 10px 22px; border-radius: 8px;"><div style="width: 66px; height: 96px; border-radius: 8px; background: rgb(239, 232, 218); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/arts.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="height: 3px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); overflow: hidden; margin-top: 7px;"><div style="width: 8%; height: 100%; background: rgb(119, 185, 0);"></div></div></div><div style="flex-shrink: 0;"><div style="box-shadow: rgba(20, 28, 12, 0.18) 0px 10px 22px; border-radius: 8px;"><div style="width: 66px; height: 96px; border-radius: 8px; background: rgb(12, 38, 34); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/fiction.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="height: 3px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); overflow: hidden; margin-top: 7px;"><div style="height: 100%; background: rgb(119, 185, 0);"></div></div></div></div></div></div></div></div></div>
+  </div>
+</section>
+
+<!-- ===================== VIDEO ===================== -->
+<section class="video" id="watch">
+  <div class="wrap">
+    <div class="vhead">
+      <div class="eyebrow"><span class="rule"></span>Watch</div>
+      <h2 class="dtitle">Two minutes, end to end.</h2>
+      <p class="dsub" style="text-align:center">The whole reader, from the first import to the card that brings it back.</p>
+    </div>
+    <div class="vframe" id="vframe" data-id="ywSL9GbbUjQ">
+      <img src="assets/video-poster.jpg" width="1280" height="720" alt="Krixo: The Reading App That Won't Let You Forget" loading="lazy" decoding="async">
+      <button class="vbtn" id="vbtn" type="button" aria-label="Play the Krixo product video">
+        <span class="disc"><svg width="30" height="30" viewBox="0 0 24 24" fill="var(--onAccent)"><path d="M8 5v14l11-7z"/></svg></span>
+      </button>
+    </div>
+    <div class="vcap">Krixo: the reading app that won't let you forget</div>
+  </div>
+</section>
+
+<!-- ===================== FEATURES ===================== -->
+
+  <section class="feat">
+    <div class="phcol"><div class="pw"><div class="pf"><div class="ps"><div style="width: 100%; height: 100%; position: relative; background: rgb(245, 247, 239);"><div style="position: absolute; inset: 0px; opacity: 0.35;"><div style="width: 100%; height: 100%; background: rgb(245, 247, 239); display: flex; flex-direction: column;"><div style="height: 32px; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; flex-shrink: 0;"><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(23, 26, 20);">9:41</span><div style="display: flex; align-items: center; gap: 5px;"><svg width="16" height="11" viewBox="0 0 16 11" fill="#171A14"><rect x="0" y="7" width="3" height="4" rx="1"></rect><rect x="4" y="5" width="3" height="6" rx="1"></rect><rect x="8" y="2.5" width="3" height="8.5" rx="1"></rect><rect x="12" y="0" width="3" height="11" rx="1"></rect></svg><svg width="22" height="11" viewBox="0 0 22 11" fill="none"><rect x="0.5" y="0.5" width="18" height="10" rx="2.5" stroke="#171A14" opacity="0.5"></rect><rect x="2" y="2" width="13" height="7" rx="1" fill="#171A14"></rect><rect x="20" y="3.5" width="1.5" height="4" rx="0.75" fill="#171A14" opacity="0.5"></rect></svg></div></div><div style="height: 48px; display: flex; align-items: center; padding: 0px 18px; opacity: 1; transform: translateY(0px);"><div style="width: 38px; height: 38px; border-radius: 999px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center; font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 15px; color: rgb(23, 26, 20);">A</div><div style="flex: 1 1 0%; display: flex; justify-content: center;"><div style="display: flex; align-items: center; gap: 10px;"><div><div style="font-family: &quot;Space Grotesk&quot;, system-ui, sans-serif; font-weight: 700; font-size: 22px; color: rgb(23, 26, 20); letter-spacing: -0.6px; line-height: 1;">kri<span style="color: rgb(119, 185, 0);">x</span>o</div></div></div></div><div style="width: 38px; height: 38px; border-radius: 999px; background: rgba(119, 185, 0, 0.15); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="2.4"><path d="M12 5v14M5 12h14"></path></svg></div></div><div style="padding: 10px 18px 0px; opacity: 1; transform: translateY(0px);"><div style="background: rgb(245, 247, 239); border-radius: 24px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 20px; box-shadow: rgba(20, 28, 12, 0.07) 0px 12px 26px;"><div style="display: flex; align-items: center; justify-content: space-between;"><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; letter-spacing: 1.8px; color: rgb(105, 114, 123); text-transform: uppercase;">Continue</div><div style="display: flex; gap: 8px;"><div style="width: 34px; height: 34px; border-radius: 999px; background: rgba(119, 185, 0, 0.15); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="1.9"><path d="M3 18v-5a9 9 0 0118 0v5"></path><path d="M18 14h2a1 1 0 011 1v3a1 1 0 01-1 1h-2zM6 14H4a1 1 0 00-1 1v3a1 1 0 001 1h2z"></path></svg></div><div style="width: 34px; height: 34px; border-radius: 999px; background: rgba(119, 185, 0, 0.15); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="1.8"><path d="M5 3h9l5 5v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4a1 1 0 011-1z"></path><path d="M14 3v5h5"></path><path d="M9.6 12.6l.9 2 2 .9-2 .9-.9 2-.9-2-2-.9 2-.9z"></path></svg></div></div></div><div style="display: flex; gap: 16px; margin-top: 16px; align-items: center;"><div style="box-shadow: rgba(20, 28, 12, 0.28) 0px 12px 26px; border-radius: 8px;"><div style="width: 92px; height: 132px; border-radius: 8px; background: rgb(21, 37, 52); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/stillpoint.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="flex: 1 1 0%; min-width: 0px;"><div style="font-family: Lora, Georgia, serif; font-weight: 700; font-size: 20px; color: rgb(23, 26, 20); line-height: 1.2;">The Still Point</div><div style="font-family: Outfit, system-ui, sans-serif; font-size: 13px; color: rgb(121, 130, 138); margin-top: 3px;">Marguerite Adler</div><div style="margin-top: 14px; font-family: Lora, Georgia, serif; font-weight: 700; font-size: 15px; color: rgb(75, 85, 96);">38%<span style="font-family: Outfit, system-ui, sans-serif; font-weight: 400; font-size: 12px; color: rgb(121, 130, 138);">  ·  page 34</span></div><div style="height: 6px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); overflow: hidden; margin-top: 8px;"><div style="width: 38%; height: 100%; background: rgb(119, 185, 0); border-radius: 999px;"></div></div></div></div><div style="height: 52px; border-radius: 15px; background: rgba(119, 185, 0, 0.15); border: 1px solid rgba(20, 28, 12, 0.1); display: flex; align-items: center; justify-content: center; gap: 9px; margin-top: 18px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#171A14"><path d="M8 5v14l11-7z"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 15px; color: rgb(23, 26, 20);">Resume reading</span></div></div></div><div style="padding: 16px 22px 0px; opacity: 1; transform: translateY(0px);"><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; letter-spacing: 1.6px; color: rgb(121, 130, 138); text-transform: uppercase;">Ask your library</div></div><div style="display: flex; gap: 10px; padding: 8px 20px 0px; opacity: 1; transform: translateY(0px);"><div style="flex: 1 1 0%; background: rgb(255, 255, 255); border-radius: 14px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 13px 14px; display: flex; align-items: center; justify-content: center; gap: 8px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="#171A14"><path d="M12 3l1.7 5.1L19 10l-5.3 1.9L12 17l-1.7-5.1L5 10l5.3-1.9z"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 14px; color: rgb(23, 26, 20);">Ask the Library</span></div><div style="flex: 1 1 0%; background: rgb(255, 255, 255); border-radius: 14px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 13px 8px; display: flex; align-items: center; justify-content: center; gap: 6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4-4"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(23, 26, 20);">X-ray</span></div></div><div style="display: flex; gap: 10px; padding: 10px 20px 0px; opacity: 1; transform: translateY(0px);"><div style="flex: 1 1 0%; background: rgb(255, 255, 255); border-radius: 16px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 11px 10px; display: flex; flex-direction: column; align-items: center; gap: 7px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="1.9"><path d="M12 2v1.6M4.6 5.6l1.1 1.1M19.4 5.6l-1.1 1.1M2.5 12H4M20 12h1.5" opacity="0.55"></path><path d="M15.5 13A5 5 0 1 0 8.5 13c.8.7 1.2 1.5 1.3 2.4l.1.8h4.2l.1-.8c.1-.9.5-1.7 1.3-2.4z"></path><path d="M9.7 18.6h4.6M10.8 21.1h2.4"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 12.5px; color: rgb(23, 26, 20); text-align: center; line-height: 1.28;">9 Concepts &amp; 24 Words</span></div><div style="flex: 1 1 0%; background: rgb(255, 255, 255); border-radius: 16px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 11px 10px; display: flex; flex-direction: column; align-items: center; gap: 7px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="2"><path d="M8 3H6a2 2 0 00-2 2v14a2 2 0 002 2h8a2 2 0 002-2v-2"></path><path d="M14 3h4a2 2 0 012 2v10"></path><path d="M9 9h3M9 13h6M9 17h4"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(23, 26, 20); text-align: center;">Quiz 3 cards</span></div></div><div style="padding: 18px 20px 0px; opacity: 1; transform: translateY(0px); display: flex; align-items: center; justify-content: space-between;"><div style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 17px; color: rgb(23, 26, 20);">Your library</div><div style="display: flex; align-items: center; gap: 4px; font-family: Outfit, system-ui, sans-serif; font-weight: 700; font-size: 12.5px; color: rgb(23, 26, 20);">Browse all <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="2.4"><path d="M9 18l6-6-6-6"></path></svg></div></div><div style="display: flex; gap: 12px; padding: 12px 0px 0px 20px; opacity: 1; transform: translateY(0px); overflow: hidden;"><div style="flex-shrink: 0;"><div style="box-shadow: rgba(20, 28, 12, 0.18) 0px 10px 22px; border-radius: 8px;"><div style="width: 66px; height: 96px; border-radius: 8px; background: rgb(22, 24, 29); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/tech.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="height: 3px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); overflow: hidden; margin-top: 7px;"><div style="width: 62%; height: 100%; background: rgb(119, 185, 0);"></div></div></div><div style="flex-shrink: 0;"><div style="box-shadow: rgba(20, 28, 12, 0.18) 0px 10px 22px; border-radius: 8px;"><div style="width: 66px; height: 96px; border-radius: 8px; background: rgb(10, 26, 48); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/science.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="height: 3px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); overflow: hidden; margin-top: 7px;"><div style="width: 20%; height: 100%; background: rgb(119, 185, 0);"></div></div></div><div style="flex-shrink: 0;"><div style="box-shadow: rgba(20, 28, 12, 0.18) 0px 10px 22px; border-radius: 8px;"><div style="width: 66px; height: 96px; border-radius: 8px; background: rgb(239, 232, 218); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/arts.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="height: 3px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); overflow: hidden; margin-top: 7px;"><div style="width: 8%; height: 100%; background: rgb(119, 185, 0);"></div></div></div><div style="flex-shrink: 0;"><div style="box-shadow: rgba(20, 28, 12, 0.18) 0px 10px 22px; border-radius: 8px;"><div style="width: 66px; height: 96px; border-radius: 8px; background: rgb(12, 38, 34); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/fiction.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="height: 3px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); overflow: hidden; margin-top: 7px;"><div style="height: 100%; background: rgb(119, 185, 0);"></div></div></div></div></div></div><div style="position: absolute; inset: 0px; background: rgba(20, 28, 12, 0.28);"></div><div style="position: absolute; left: 0px; right: 0px; bottom: 0px; background: rgb(237, 241, 227); border-top-left-radius: 26px; border-top-right-radius: 26px; padding: 10px 20px 26px; transform: translateY(0px); box-shadow: rgba(20, 28, 12, 0.25) 0px -18px 44px;"><div style="width: 36px; height: 4px; border-radius: 2px; background: rgb(152, 160, 168); margin: 0px auto 16px;"></div><div style="border-radius: 24px; border: 1.5px dashed rgb(119, 185, 0); background: rgba(119, 185, 0, 0.15); padding: 26px 20px; display: flex; flex-direction: column; align-items: center;"><div style="width: 64px; height: 64px; border-radius: 20px; background: rgb(255, 255, 255); display: grid; place-items: center;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="1.8"><path d="M12 16V4M7 9l5-5 5 5"></path><path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2"></path></svg></div><div style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 19px; color: rgb(23, 26, 20); margin-top: 16px;">Add a book</div><div style="font-family: Outfit, system-ui, sans-serif; font-size: 13px; color: rgb(121, 130, 138); margin-top: 5px; text-align: center; max-width: 250px; line-height: 1.4;">Choose a document from your phone. Highlights, AI and recall come free.</div><div style="display: flex; align-items: center; gap: 8px; height: 48px; padding: 0px 22px; border-radius: 14px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); margin-top: 16px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="2.2"><path d="M4 4h7l2 2h7a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V5a1 1 0 011-1z"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 15px; color: rgb(23, 26, 20);">Browse files</span></div><div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 16px;"><div style="display: flex; align-items: center; gap: 5px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); border-radius: 8px; padding: 5px 11px;"><div style="width: 6px; height: 6px; border-radius: 2px; background: rgb(224, 78, 44);"></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(105, 114, 123);">PDF</span></div><div style="display: flex; align-items: center; gap: 5px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); border-radius: 8px; padding: 5px 11px;"><div style="width: 6px; height: 6px; border-radius: 2px; background: rgb(91, 147, 245);"></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(105, 114, 123);">EPUB</span></div><div style="display: flex; align-items: center; gap: 5px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); border-radius: 8px; padding: 5px 11px;"><div style="width: 6px; height: 6px; border-radius: 2px; background: rgb(26, 122, 104);"></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(105, 114, 123);">WEB</span></div><div style="display: flex; align-items: center; gap: 5px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); border-radius: 8px; padding: 5px 11px;"><div style="width: 6px; height: 6px; border-radius: 2px; background: rgb(43, 87, 154);"></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(105, 114, 123);">DOCX</span></div><div style="display: flex; align-items: center; gap: 5px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); border-radius: 8px; padding: 5px 11px;"><div style="width: 6px; height: 6px; border-radius: 2px; background: rgb(122, 90, 248);"></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(105, 114, 123);">MD</span></div><div style="display: flex; align-items: center; gap: 5px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); border-radius: 8px; padding: 5px 11px;"><div style="width: 6px; height: 6px; border-radius: 2px; background: rgb(138, 136, 128);"></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(105, 114, 123);">TXT</span></div></div></div><div style="display: flex; align-items: center; gap: 12px; margin: 20px 0px 0px;"><div style="flex: 1 1 0%; height: 1px; background: rgba(20, 28, 12, 0.1);"></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; letter-spacing: 1.5px; color: rgb(152, 160, 168);">OR</span><div style="flex: 1 1 0%; height: 1px; background: rgba(20, 28, 12, 0.1);"></div></div><div style="margin-top: 18px;"><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; letter-spacing: 1.6px; color: rgb(121, 130, 138); text-transform: uppercase;">Import from the web</div></div><div style="display: flex; align-items: center; gap: 8px; height: 52px; background: rgb(255, 255, 255); border-radius: 15px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 0px 6px 0px 15px; margin-top: 9px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#79828A" stroke-width="2"><path d="M9 17H7A5 5 0 017 7h2M15 7h2a5 5 0 010 10h-2M8 12h8"></path></svg><span style="flex: 1 1 0%; font-family: Outfit, system-ui, sans-serif; font-size: 14px; color: rgb(121, 130, 138); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Paste a link</span><div style="width: 40px; height: 40px; border-radius: 12px; background: rgba(119, 185, 0, 0.15); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#171A14" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div></div><div style="display: flex; align-items: center; justify-content: center; gap: 7px; margin-top: 20px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4F7A00" stroke-width="1.7"><rect x="4" y="10" width="16" height="11" rx="2.5"></rect><path d="M8 10V7a4 4 0 018 0v3"></path><circle cx="12" cy="15.5" r="1.4"></circle></svg><span style="font-family: Outfit, system-ui, sans-serif; font-size: 12px; color: rgb(79, 122, 0);">Your books stay on this device</span></div></div></div></div></div></div></div>
+    <div class="txtcol">
+      <div class="eyebrow"><span class="rule"></span>Add anything</div>
+      <h2 class="dtitle">PDF, EPUB, Docs<br>and more.</h2>
+      <p class="dsub">Drop in any document, or paste a link. Highlights, AI and recall come free.</p>
+    </div>
+  </section>
+
+  <section class="feat flip" id="read">
+    <div class="phcol" style="order:2"><div class="pw"><div class="pf"><div class="ps"><div style="width: 100%; height: 100%; background: rgb(255, 255, 255); display: flex; flex-direction: column; position: relative;"><div style="height: 32px; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; flex-shrink: 0;"><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(23, 26, 20);">9:41</span><div style="display: flex; align-items: center; gap: 5px;"><svg width="16" height="11" viewBox="0 0 16 11" fill="#171A14"><rect x="0" y="7" width="3" height="4" rx="1"></rect><rect x="4" y="5" width="3" height="6" rx="1"></rect><rect x="8" y="2.5" width="3" height="8.5" rx="1"></rect><rect x="12" y="0" width="3" height="11" rx="1"></rect></svg><svg width="22" height="11" viewBox="0 0 22 11" fill="none"><rect x="0.5" y="0.5" width="18" height="10" rx="2.5" stroke="#171A14" opacity="0.5"></rect><rect x="2" y="2" width="13" height="7" rx="1" fill="#171A14"></rect><rect x="20" y="3.5" width="1.5" height="4" rx="0.75" fill="#171A14" opacity="0.5"></rect></svg></div></div><div style="height: 50px; display: flex; align-items: center; gap: 8px; padding: 0px 16px; background: rgb(237, 241, 227); border-bottom: 1px solid rgba(20, 28, 12, 0.1);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2.2"><path d="M15 18l-6-6 6-6"></path></svg><div style="flex: 1 1 0%; text-align: center;"><div style="font-family: Outfit, system-ui, sans-serif; font-weight: 700; font-size: 14px; color: rgb(23, 26, 20);">The Still Point</div><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 8.5px; letter-spacing: 0.5px; color: rgb(121, 130, 138); margin-top: 1px;">TAP TO JUMP</div></div><div style="width: 36px; height: 36px; border-radius: 11px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"></path></svg></div><div style="width: 36px; height: 36px; border-radius: 11px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center; font-family: Lora, Georgia, serif; font-weight: 700; font-size: 15px; color: rgb(75, 85, 96);">Aa</div><div style="width: 36px; height: 36px; border-radius: 11px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg></div></div><div style="flex: 1 1 0%; padding: 30px; overflow: hidden; position: relative;"><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; letter-spacing: 2px; color: rgb(154, 147, 132); margin-bottom: 20px;">PART TWO · 34</div><div style="font-family: Lora, Georgia, serif; font-size: 19px; line-height: 1.78; color: rgb(74, 78, 68);"><div style="position: relative; display: block;"><span style="position: relative; color: rgb(74, 78, 68); background: transparent; border-radius: 3px;">Nowhere is quieter than the space</span></div><div style="position: relative; display: block;"><span style="position: relative; color: rgb(74, 78, 68); background: transparent; border-radius: 3px;">behind your own attention.</span></div><div style="position: relative; display: block;"><span style="position: relative; color: rgb(74, 78, 68); background: transparent; border-radius: 3px;">Very little is needed for a steady life;</span></div><div style="position: relative; display: block;"><span style="position: relative; color: rgb(74, 78, 68); background: transparent; border-radius: 3px;">nearly all of it is a matter of where</span></div><div style="position: relative; display: block;"><span style="position: relative; color: rgb(74, 78, 68); background: transparent; border-radius: 3px;">you place your attention.</span></div><div style="position: relative; display: block;"><span style="position: relative; color: rgb(74, 78, 68); background: transparent; border-radius: 3px;">Notice the pull of every alarm, then let</span></div><div style="position: relative; display: block;"><span style="position: relative; color: rgb(74, 78, 68); background: transparent; border-radius: 3px;">it pass; what remains is calm</span></div><div style="position: relative; display: block;"><span style="position: relative; color: rgb(74, 78, 68); background: transparent; border-radius: 3px;"><span style="border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor;">equanimity.</span></span></div></div></div><div style="padding: 8px 12px 14px;"><div style="background: rgb(245, 247, 239); border-radius: 20px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 13px 15px 11px; box-shadow: rgba(20, 28, 12, 0.14) 0px 12px 26px;"><div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(121, 130, 138);">Page 34 of 210</span><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(79, 122, 0);">16%</span></div><div style="height: 6px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); position: relative; margin-bottom: 13px;"><div style="width: 16%; height: 100%; background: rgb(119, 185, 0); border-radius: 999px;"></div><div style="position: absolute; left: 16%; top: -5px; width: 16px; height: 16px; border-radius: 8px; margin-left: -8px; background: rgb(255, 255, 255); border: 2px solid rgb(119, 185, 0); box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;"></div></div><div style="display: flex; justify-content: space-between;"><div style="width: 50px; display: flex; flex-direction: column; align-items: center; gap: 5px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="1.9"><path d="M6 2v14a2 2 0 002 2h14"></path><path d="M18 22V8a2 2 0 00-2-2H2"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-size: 9.5px; color: rgb(121, 130, 138);">Area</span></div><div style="width: 50px; display: flex; flex-direction: column; align-items: center; gap: 5px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="1.9"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4z"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-size: 9.5px; color: rgb(121, 130, 138);">Draw</span></div><div style="width: 50px; display: flex; flex-direction: column; align-items: center; gap: 5px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="1.9"><path d="M3 18v-5a9 9 0 0118 0v5"></path><path d="M18 14h2a1 1 0 011 1v3a1 1 0 01-1 1h-2zM6 14H4a1 1 0 00-1 1v3a1 1 0 001 1h2z"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-size: 9.5px; color: rgb(121, 130, 138);">Listen</span></div><div style="width: 50px; display: flex; flex-direction: column; align-items: center; gap: 5px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="1.85"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-size: 9.5px; color: rgb(121, 130, 138);">Ask</span></div><div style="width: 50px; display: flex; flex-direction: column; align-items: center; gap: 5px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4-4"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-size: 9.5px; color: rgb(121, 130, 138);">X-ray</span></div></div></div></div></div></div></div></div></div>
+    <div class="txtcol">
+      <div class="eyebrow"><span class="rule"></span>Read</div>
+      <h2 class="dtitle">A reader you'll want to open.</h2>
+      <p class="dsub">Continuous scroll, five themes, typography that feels right.</p>
+    </div>
+  </section>
+
+  <section class="feat">
+    <div class="phcol"><div class="pw"><div class="pf"><div class="ps"><div style="width: 100%; height: 100%; background: rgb(237, 241, 227); display: flex; flex-direction: column;"><div style="height: 32px; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; flex-shrink: 0;"><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(23, 26, 20);">9:41</span><div style="display: flex; align-items: center; gap: 5px;"><svg width="16" height="11" viewBox="0 0 16 11" fill="#171A14"><rect x="0" y="7" width="3" height="4" rx="1"></rect><rect x="4" y="5" width="3" height="6" rx="1"></rect><rect x="8" y="2.5" width="3" height="8.5" rx="1"></rect><rect x="12" y="0" width="3" height="11" rx="1"></rect></svg><svg width="22" height="11" viewBox="0 0 22 11" fill="none"><rect x="0.5" y="0.5" width="18" height="10" rx="2.5" stroke="#171A14" opacity="0.5"></rect><rect x="2" y="2" width="13" height="7" rx="1" fill="#171A14"></rect><rect x="20" y="3.5" width="1.5" height="4" rx="0.75" fill="#171A14" opacity="0.5"></rect></svg></div></div><div style="display: flex; align-items: center; gap: 10px; padding: 6px 18px 12px; border-bottom: 1px solid rgba(20, 28, 12, 0.06);"><div style="flex: 1 1 0%; min-width: 0px;"><div style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 19px; color: rgb(23, 26, 20);">Krixo explains</div></div><div style="display: flex; align-items: center; gap: 4px; height: 32px; padding: 0px 12px; border-radius: 999px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4F7A00" stroke-width="1.9"><path d="M12 5v14M5 12h14"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 700; font-size: 12px; color: rgb(79, 122, 0);">New</span></div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2.2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"></path></svg></div><div style="flex: 1 1 0%; padding: 18px 16px; overflow: hidden;"><div style="background: rgb(245, 247, 239); border-width: 1px 1px 1px 3px; border-style: solid; border-color: rgba(20, 28, 12, 0.1) rgba(20, 28, 12, 0.1) rgba(20, 28, 12, 0.1) rgb(242, 201, 76); border-image: initial; border-radius: 10px; padding: 10px 13px; margin-bottom: 16px;"><span style="font-family: Lora, Georgia, serif; font-size: 13px; font-style: italic; color: rgb(75, 85, 96); line-height: 1.5;">“Very little is needed for a steady life; nearly all of it is where you place your attention.”</span></div><div><div style="display: flex; align-items: center; gap: 6px; margin-bottom: 8px;"><div style="width: 26px; height: 26px; border-radius: 999px; background: rgba(119, 185, 0, 0.15); display: grid; place-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#4F7A00"><path d="M12 3l1.7 5.1L19 10l-5.3 1.9L12 17l-1.7-5.1L5 10l5.3-1.9z"></path></svg></div><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 700; font-size: 13px; color: rgb(23, 26, 20);">Krixo</span><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 9px; letter-spacing: 0.4px; color: rgb(152, 160, 168);">EXPLANATION</span></div><div style="font-family: Lora, Georgia, serif; font-size: 14.5px; line-height: 1.62; color: rgb(75, 85, 96);">Adler's claim is deceptively plain: a steady life is built from attention, not circumstance. What unsettles us is rarely the event - it's the pull we grant it. Reclaim the attention and calm follows.<span style="opacity: 0; color: rgb(119, 185, 0);">▌</span></div><div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; align-items: center;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(121, 130, 138); letter-spacing: 1px;">SOURCES</span><div style="display: flex; align-items: center; gap: 6px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); border-radius: 8px; padding: 5px 9px;"><div style="width: 11px; height: 15px; border-radius: 2px; background: rgb(21, 37, 52);"></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(105, 114, 123);">The Still Point · p.34</span></div></div></div></div><div style="padding: 10px 16px 20px; border-top: 1px solid rgba(20, 28, 12, 0.06);"><div style="display: flex; align-items: center; gap: 9px; min-height: 50px; padding: 6px 6px 6px 16px; border-radius: 16px; background: rgb(245, 247, 239); border: 1px solid rgba(20, 28, 12, 0.06);"><span style="flex: 1 1 0%; font-family: Outfit, system-ui, sans-serif; font-size: 14px; color: rgb(121, 130, 138);">Ask across every book…</span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#79828A" stroke-width="1.8"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0014 0M12 18v3"></path></svg><div style="width: 38px; height: 38px; border-radius: 999px; background: rgb(119, 185, 0); display: grid; place-items: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#15210A" stroke-width="2.2"><path d="M7 11l5-5 5 5M12 6v13"></path></svg></div></div></div></div></div></div></div></div>
+    <div class="txtcol">
+      <div class="eyebrow"><span class="rule"></span>Understand</div>
+      <h2 class="dtitle">Highlight, then explain.</h2>
+      <p class="dsub">Ask AI to unpack any passage, cited to the exact page.</p>
+    </div>
+  </section>
+
+  <section class="feat flip">
+    <div class="phcol" style="order:2"><div class="pw"><div class="pf"><div class="ps"><div style="width: 100%; height: 100%; background: rgb(237, 241, 227); display: flex; flex-direction: column;"><div style="height: 32px; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; flex-shrink: 0;"><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(23, 26, 20);">9:41</span><div style="display: flex; align-items: center; gap: 5px;"><svg width="16" height="11" viewBox="0 0 16 11" fill="#171A14"><rect x="0" y="7" width="3" height="4" rx="1"></rect><rect x="4" y="5" width="3" height="6" rx="1"></rect><rect x="8" y="2.5" width="3" height="8.5" rx="1"></rect><rect x="12" y="0" width="3" height="11" rx="1"></rect></svg><svg width="22" height="11" viewBox="0 0 22 11" fill="none"><rect x="0.5" y="0.5" width="18" height="10" rx="2.5" stroke="#171A14" opacity="0.5"></rect><rect x="2" y="2" width="13" height="7" rx="1" fill="#171A14"></rect><rect x="20" y="3.5" width="1.5" height="4" rx="0.75" fill="#171A14" opacity="0.5"></rect></svg></div></div><div style="padding: 6px 16px 12px; border-bottom: 1px solid rgba(20, 28, 12, 0.1);"><div style="display: flex; align-items: center; gap: 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2.2"><path d="M15 18l-6-6 6-6"></path></svg><div style="flex: 1 1 0%; display: flex; align-items: center; gap: 9px; height: 44px; padding: 0px 12px; border-radius: 14px; background: rgb(255, 255, 255); border: 1px solid rgb(91, 147, 245);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#5B93F5" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4-4"></path></svg><span style="flex: 1 1 0%; font-family: Outfit, system-ui, sans-serif; font-size: 14px; color: rgb(23, 26, 20);">equanimity</span></div></div><div style="display: flex; align-items: center; gap: 6px; margin-top: 11px;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10.5px; color: rgb(121, 130, 138);">3 passages · 2 books</span><div style="width: 3px; height: 3px; border-radius: 999px; background: rgb(152, 160, 168);"></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10.5px; color: rgb(79, 122, 0);">searched on-device</span></div></div><div style="flex: 1 1 0%; padding: 18px 16px; display: flex; flex-direction: column; gap: 20px; overflow: hidden;"><div style="opacity: 1; transform: translateY(0px);"><div style="display: flex; align-items: center; gap: 11px; padding: 4px 4px 10px;"><div style="box-shadow: rgba(20, 28, 12, 0.2) 0px 3px 8px; border-radius: 5px;"><div style="width: 34px; height: 48px; border-radius: 5px; background: rgb(21, 37, 52); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/stillpoint.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div><div style="font-family: Outfit, system-ui, sans-serif; font-weight: 700; font-size: 14px; color: rgb(23, 26, 20);">The Still Point</div><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(121, 130, 138); margin-top: 2px;">Adler · 4 passages</div></div></div><div style="display: flex; flex-direction: column; gap: 8px;"><div style="background: rgb(255, 255, 255); border-radius: 14px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 14px; box-shadow: rgba(20, 28, 12, 0.05) 0px 4px 14px;"><div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 7px;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 9.5px; letter-spacing: 0.5px; color: rgb(152, 160, 168);">PAGE 58</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#5B93F5" stroke-width="2.4"><path d="M9 18l6-6-6-6"></path></svg></div><div style="font-family: Lora, Georgia, serif; font-size: 14px; line-height: 1.57; color: rgb(75, 85, 96);">notice the pull of every alarm, then let it pass; what remains is <span style="background: rgba(91, 147, 245, 0.15); color: rgb(23, 26, 20);">equanimity</span>.</div></div><div style="background: rgb(255, 255, 255); border-radius: 14px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 14px; box-shadow: rgba(20, 28, 12, 0.05) 0px 4px 14px;"><div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 7px;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 9.5px; letter-spacing: 0.5px; color: rgb(152, 160, 168);">PAGE 34</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#5B93F5" stroke-width="2.4"><path d="M9 18l6-6-6-6"></path></svg></div><div style="font-family: Lora, Georgia, serif; font-size: 14px; line-height: 1.57; color: rgb(75, 85, 96);">the still point is a mind at rest  -  hold your <span style="background: rgba(91, 147, 245, 0.15); color: rgb(23, 26, 20);">equanimity</span> and nothing can shake it.</div></div></div></div><div style="opacity: 1; transform: translateY(0px);"><div style="display: flex; align-items: center; gap: 11px; padding: 4px 4px 10px;"><div style="box-shadow: rgba(20, 28, 12, 0.2) 0px 3px 8px; border-radius: 5px;"><div style="width: 34px; height: 48px; border-radius: 5px; background: rgb(12, 38, 34); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/fiction.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div><div style="font-family: Outfit, system-ui, sans-serif; font-weight: 700; font-size: 14px; color: rgb(23, 26, 20);">The Lantern-Keeper's Daughter</div><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(121, 130, 138); margin-top: 2px;">Moreau · 2 passages</div></div></div><div style="display: flex; flex-direction: column; gap: 8px;"><div style="background: rgb(255, 255, 255); border-radius: 14px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 14px; box-shadow: rgba(20, 28, 12, 0.05) 0px 4px 14px;"><div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 7px;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 9.5px; letter-spacing: 0.5px; color: rgb(152, 160, 168);">PAGE 58</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#5B93F5" stroke-width="2.4"><path d="M9 18l6-6-6-6"></path></svg></div><div style="font-family: Lora, Georgia, serif; font-size: 14px; line-height: 1.57; color: rgb(75, 85, 96);">she met the harbour's ruin with an <span style="background: rgba(91, 147, 245, 0.15); color: rgb(23, 26, 20);">equanimity</span> that frightened even her father.</div></div></div></div></div></div></div></div></div></div>
+    <div class="txtcol">
+      <div class="eyebrow"><span class="rule"></span>X-ray search</div>
+      <h2 class="dtitle">Find it by meaning.</h2>
+      <p class="dsub">Semantic search across every book. Retrieval runs on your phone.</p>
+    </div>
+  </section>
+
+  <section class="feat" id="remember">
+    <div class="phcol"><div class="pw"><div class="pf"><div class="ps"><div style="width: 100%; height: 100%; background: rgb(237, 241, 227); display: flex; flex-direction: column;"><div style="height: 32px; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; flex-shrink: 0;"><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(23, 26, 20);">9:41</span><div style="display: flex; align-items: center; gap: 5px;"><svg width="16" height="11" viewBox="0 0 16 11" fill="#171A14"><rect x="0" y="7" width="3" height="4" rx="1"></rect><rect x="4" y="5" width="3" height="6" rx="1"></rect><rect x="8" y="2.5" width="3" height="8.5" rx="1"></rect><rect x="12" y="0" width="3" height="11" rx="1"></rect></svg><svg width="22" height="11" viewBox="0 0 22 11" fill="none"><rect x="0.5" y="0.5" width="18" height="10" rx="2.5" stroke="#171A14" opacity="0.5"></rect><rect x="2" y="2" width="13" height="7" rx="1" fill="#171A14"></rect><rect x="20" y="3.5" width="1.5" height="4" rx="0.75" fill="#171A14" opacity="0.5"></rect></svg></div></div><div style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0px 18px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#69727B" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"></path></svg><div style="flex: 1 1 0%; display: flex; gap: 4px;"><div style="flex: 1 1 0%; height: 4px; border-radius: 2px; background: rgb(119, 185, 0);"></div><div style="flex: 1 1 0%; height: 4px; border-radius: 2px; background: rgb(255, 255, 255);"></div><div style="flex: 1 1 0%; height: 4px; border-radius: 2px; background: rgb(255, 255, 255);"></div></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 11px; color: rgb(121, 130, 138);">1 / 3</span></div><div style="flex: 1 1 0%; padding: 16px 18px 0px; overflow: hidden;"><div style="display: flex; align-items: center; gap: 7px; margin-bottom: 14px;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; letter-spacing: 1.6px; color: rgb(119, 185, 0);">CONCEPT CHECK</span><div style="width: 3px; height: 3px; border-radius: 999px; background: rgb(152, 160, 168);"></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(152, 160, 168);">The Still Point</span></div><div style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.36; color: rgb(23, 26, 20); margin-bottom: 22px;">According to Adler, what makes a life steady?</div><div style="display: flex; flex-direction: column; gap: 10px;"><div style="display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-radius: 15px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); opacity: 0.5;"><div style="width: 26px; height: 26px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 12px; color: rgb(105, 114, 123);">A</span></div><span style="flex: 1 1 0%; font-family: Outfit, system-ui, sans-serif; font-size: 13.5px; color: rgb(75, 85, 96); line-height: 1.4;">Control over your circumstances</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-radius: 15px; background: rgba(45, 212, 191, 0.15); border: 1.5px solid rgb(45, 212, 191); opacity: 1;"><div style="width: 26px; height: 26px; border-radius: 999px; background: rgb(45, 212, 191); display: grid; place-items: center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#fff" stroke-width="3"><path d="M20 6L9 17l-5-5"></path></svg></div><span style="flex: 1 1 0%; font-family: Outfit, system-ui, sans-serif; font-size: 13.5px; color: rgb(23, 26, 20); line-height: 1.4;">Where you place your attention</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-radius: 15px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); opacity: 0.5;"><div style="width: 26px; height: 26px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 12px; color: rgb(105, 114, 123);">C</span></div><span style="flex: 1 1 0%; font-family: Outfit, system-ui, sans-serif; font-size: 13.5px; color: rgb(75, 85, 96); line-height: 1.4;">Avoiding every disruption</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-radius: 15px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1); opacity: 0.5;"><div style="width: 26px; height: 26px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 12px; color: rgb(105, 114, 123);">D</span></div><span style="flex: 1 1 0%; font-family: Outfit, system-ui, sans-serif; font-size: 13.5px; color: rgb(75, 85, 96); line-height: 1.4;">The approval of others</span></div></div><div style="background: rgb(255, 255, 255); border-radius: 18px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 15px; margin-top: 18px; box-shadow: rgba(20, 28, 12, 0.06) 0px 8px 26px; opacity: 1; transform: translateY(0px);"><div style="display: flex; align-items: center; gap: 7px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#2DD4BF" stroke-width="2.6"><path d="M20 6L9 17l-5-5"></path></svg><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 700; font-size: 14px; color: rgb(45, 212, 191);">Correct</span><div style="flex: 1 1 0%;"></div><div style="display: flex; align-items: center; gap: 4px; background: rgba(119, 185, 0, 0.15); border-radius: 999px; padding: 4px 9px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4F7A00" stroke-width="2.2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 9.5px; color: rgb(79, 122, 0);">Returns in 9 days</span></div></div><div style="font-family: Outfit, system-ui, sans-serif; font-size: 13px; line-height: 1.6; color: rgb(75, 85, 96); margin-top: 10px;">Steadiness is internal  -  Adler argues it comes from where you place your attention, not from your circumstances.</div></div></div></div></div></div></div></div>
+    <div class="txtcol">
+      <div class="eyebrow"><span class="rule"></span>Remember</div>
+      <h2 class="dtitle">Every highlight,<br>a quiz card.</h2>
+      <p class="dsub">Turned into spaced-repetition cards, shown right before you'd forget.</p>
+    </div>
+  </section>
+
+  <section class="feat flip">
+    <div class="phcol" style="order:2"><div class="pw"><div class="pf"><div class="ps"><div style="width: 100%; height: 100%; background: rgb(237, 241, 227); display: flex; flex-direction: column;"><div style="height: 32px; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; flex-shrink: 0;"><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(23, 26, 20);">9:41</span><div style="display: flex; align-items: center; gap: 5px;"><svg width="16" height="11" viewBox="0 0 16 11" fill="#171A14"><rect x="0" y="7" width="3" height="4" rx="1"></rect><rect x="4" y="5" width="3" height="6" rx="1"></rect><rect x="8" y="2.5" width="3" height="8.5" rx="1"></rect><rect x="12" y="0" width="3" height="11" rx="1"></rect></svg><svg width="22" height="11" viewBox="0 0 22 11" fill="none"><rect x="0.5" y="0.5" width="18" height="10" rx="2.5" stroke="#171A14" opacity="0.5"></rect><rect x="2" y="2" width="13" height="7" rx="1" fill="#171A14"></rect><rect x="20" y="3.5" width="1.5" height="4" rx="0.75" fill="#171A14" opacity="0.5"></rect></svg></div></div><div style="display: flex; align-items: center; gap: 10px; padding: 6px 16px 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2.2"><path d="M15 18l-6-6 6-6"></path></svg><span style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 19px; color: rgb(23, 26, 20);">Audio Overview</span></div><div style="display: flex; flex-direction: column; align-items: center; padding: 10px 20px 0px;"><div style="box-shadow: rgba(20, 28, 12, 0.3) 0px 16px 36px; border-radius: 10px;"><div style="width: 104px; height: 150px; border-radius: 10px; background: rgb(21, 37, 52); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/stillpoint.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="font-family: Lora, Georgia, serif; font-weight: 700; font-size: 18px; color: rgb(23, 26, 20); margin-top: 16px;">The Still Point</div><div style="font-family: Outfit, system-ui, sans-serif; font-size: 12.5px; color: rgb(121, 130, 138); margin-top: 2px;">Narrated overview · 11 min</div></div><div style="flex: 1 1 0%; padding: 18px 18px 0px; display: flex; flex-direction: column; gap: 8px; overflow: hidden;"><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; letter-spacing: 1.6px; color: rgb(121, 130, 138); text-transform: uppercase;">Main ideas</div><div style="display: flex; align-items: center; gap: 12px; padding: 11px 13px; border-radius: 12px; background: rgba(119, 185, 0, 0.15); border: 1px solid rgb(119, 185, 0);"><div style="width: 26px; height: 26px; border-radius: 999px; background: rgb(119, 185, 0); display: grid; place-items: center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="#15210A"><path d="M8 5v14l11-7z"></path></svg></div><span style="flex: 1 1 0%; font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13.5px; color: rgb(23, 26, 20);">The still point</span><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10.5px; color: rgb(121, 130, 138);">0:00</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 11px 13px; border-radius: 12px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1);"><div style="width: 26px; height: 26px; border-radius: 999px; background: rgb(237, 241, 227); display: grid; place-items: center;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 11px; color: rgb(121, 130, 138);">2</span></div><span style="flex: 1 1 0%; font-family: Outfit, system-ui, sans-serif; font-weight: 500; font-size: 13.5px; color: rgb(75, 85, 96);">The pull of alarms</span><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10.5px; color: rgb(121, 130, 138);">2:14</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 11px 13px; border-radius: 12px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1);"><div style="width: 26px; height: 26px; border-radius: 999px; background: rgb(237, 241, 227); display: grid; place-items: center;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 11px; color: rgb(121, 130, 138);">3</span></div><span style="flex: 1 1 0%; font-family: Outfit, system-ui, sans-serif; font-weight: 500; font-size: 13.5px; color: rgb(75, 85, 96);">Attention as a muscle</span><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10.5px; color: rgb(121, 130, 138);">5:38</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 11px 13px; border-radius: 12px; background: rgb(255, 255, 255); border: 1px solid rgba(20, 28, 12, 0.1);"><div style="width: 26px; height: 26px; border-radius: 999px; background: rgb(237, 241, 227); display: grid; place-items: center;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 11px; color: rgb(121, 130, 138);">4</span></div><span style="flex: 1 1 0%; font-family: Outfit, system-ui, sans-serif; font-weight: 500; font-size: 13.5px; color: rgb(75, 85, 96);">Returning to steady</span><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10.5px; color: rgb(121, 130, 138);">8:02</span></div></div><div style="padding: 12px 16px 20px;"><div style="background: rgb(245, 247, 239); border-radius: 18px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 13px 16px;"><div style="height: 5px; border-radius: 999px; background: rgba(20, 28, 12, 0.1); position: relative; margin-bottom: 6px;"><div style="width: 34%; height: 100%; background: rgb(119, 185, 0); border-radius: 999px;"></div><div style="position: absolute; left: 34%; top: -4px; width: 13px; height: 13px; border-radius: 7px; margin-left: -6px; background: rgb(119, 185, 0);"></div></div><div style="display: flex; justify-content: space-between; margin-bottom: 12px;"><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(121, 130, 138);">3:44</span><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; color: rgb(121, 130, 138);">11:02</span></div><div style="display: flex; align-items: center; justify-content: center; gap: 26px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2"><path d="M11 19l-7-7 7-7M20 19l-7-7 7-7"></path></svg><div style="width: 54px; height: 54px; border-radius: 27px; background: rgb(119, 185, 0); display: grid; place-items: center; box-shadow: rgba(119, 185, 0, 0.3) 0px 8px 20px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="#15210A"><path d="M6 5h4v14H6zM14 5h4v14h-4z"></path></svg></div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2"><path d="M13 5l7 7-7 7M4 5l7 7-7 7"></path></svg></div></div></div></div></div></div></div></div>
+    <div class="txtcol">
+      <div class="eyebrow"><span class="rule"></span>Audio overview</div>
+      <h2 class="dtitle">A book, as a podcast.</h2>
+      <p class="dsub">Turn any book into a narrated walkthrough of its key ideas.</p>
+    </div>
+  </section>
+
+  <section class="feat">
+    <div class="phcol"><div class="pw"><div class="pf"><div class="ps"><div style="width: 100%; height: 100%; background: rgb(237, 241, 227); display: flex; flex-direction: column;"><div style="height: 32px; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; flex-shrink: 0;"><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(23, 26, 20);">9:41</span><div style="display: flex; align-items: center; gap: 5px;"><svg width="16" height="11" viewBox="0 0 16 11" fill="#171A14"><rect x="0" y="7" width="3" height="4" rx="1"></rect><rect x="4" y="5" width="3" height="6" rx="1"></rect><rect x="8" y="2.5" width="3" height="8.5" rx="1"></rect><rect x="12" y="0" width="3" height="11" rx="1"></rect></svg><svg width="22" height="11" viewBox="0 0 22 11" fill="none"><rect x="0.5" y="0.5" width="18" height="10" rx="2.5" stroke="#171A14" opacity="0.5"></rect><rect x="2" y="2" width="13" height="7" rx="1" fill="#171A14"></rect><rect x="20" y="3.5" width="1.5" height="4" rx="0.75" fill="#171A14" opacity="0.5"></rect></svg></div></div><div style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-bottom: 1px solid rgba(20, 28, 12, 0.1); background: rgb(237, 241, 227);"><div style="width: 34px; height: 34px; flex-shrink: 0; border-radius: 10px; background: rgba(20, 28, 12, 0.06); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2.2"><path d="M15 18l-6-6 6-6"></path></svg></div><div style="flex-shrink: 0;"><div style="width: 26px; height: 38px; border-radius: 4px; background: rgb(21, 37, 52); overflow: hidden; position: relative; box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;"><img src="assets/covers/stillpoint.png" alt="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="flex: 1 1 0%; min-width: 0px; overflow: hidden;"><div style="font-family: Lora, Georgia, serif; font-weight: 700; font-size: 14px; color: rgb(23, 26, 20); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">The Still Point</div><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 9px; color: rgb(121, 130, 138); margin-top: 2px; letter-spacing: 0.5px;">STUDY NOTES</div></div><div style="height: 32px; flex-shrink: 0; padding: 0px 10px; border-radius: 9px; background: rgba(20, 28, 12, 0.06); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center; font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10.5px; color: rgb(75, 85, 96);">AI Notes</div><div style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 9px; background: rgba(20, 28, 12, 0.06); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6"></path><path d="M3.5 9a9 9 0 0114.9-3.4L23 10M1 14l4.6 4.4A9 9 0 0020.5 15"></path></svg></div><div style="height: 32px; flex-shrink: 0; padding: 0px 10px; border-radius: 9px; background: rgba(20, 28, 12, 0.06); border: 1px solid rgba(20, 28, 12, 0.1); display: flex; align-items: center; gap: 5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10.5px; color: rgb(75, 85, 96);">Save</span></div></div><div style="flex: 1 1 0%; padding: 22px; overflow: hidden;"><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 11px; letter-spacing: 2px; color: rgb(121, 130, 138); display: flex; align-items: center; gap: 6px;"><span style="font-family: Lora, Georgia, serif; font-weight: 700; color: rgb(119, 185, 0); font-size: 17px;">K</span> rixo notes</div><div style="font-family: Lora, Georgia, serif; font-weight: 700; font-size: 25px; color: rgb(119, 185, 0); margin-top: 12px;">The Still Point</div><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 12px; color: rgb(121, 130, 138); margin-top: 4px;">Marguerite Adler</div><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10.5px; color: rgb(121, 130, 138); margin-top: 5px;">notes generated today · from 12 saved items</div><div style="border-bottom: 1px solid rgba(20, 28, 12, 0.1); margin: 16px 0px 22px;"></div><div style="font-family: Lora, Georgia, serif; font-weight: 600; font-size: 19px; color: rgb(119, 185, 0); border-bottom: 2px solid rgb(119, 185, 0); padding-bottom: 9px; display: flex; justify-content: space-between; align-items: baseline;"><span>Part Two · The Steady Mind</span><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 11px; font-weight: 400; color: rgb(121, 130, 138);">pp. 30-52</span></div><div style="font-family: Lora, Georgia, serif; font-size: 14.5px; line-height: 1.75; color: rgb(75, 85, 96); margin-top: 16px;">Adler locates a steady life <strong style="color: rgb(23, 26, 20); font-weight: 600;">entirely in attention</strong>. Events stay neutral; the pull we grant them is what unsettles us.</div><div style="margin-top: 14px; display: flex; flex-direction: column; gap: 9px;"><div style="display: flex; gap: 12px; align-items: flex-start;"><div style="width: 6px; height: 6px; border-radius: 999px; background: rgb(119, 185, 0); margin-top: 8px; flex-shrink: 0;"></div><span style="font-family: Lora, Georgia, serif; font-size: 14px; line-height: 1.6; color: rgb(75, 85, 96);">Steadiness is attention, not circumstance.</span></div><div style="display: flex; gap: 12px; align-items: flex-start;"><div style="width: 6px; height: 6px; border-radius: 999px; background: rgb(119, 185, 0); margin-top: 8px; flex-shrink: 0;"></div><span style="font-family: Lora, Georgia, serif; font-size: 14px; line-height: 1.6; color: rgb(75, 85, 96);">Notice the pull, then decline to follow it.</span></div><div style="display: flex; gap: 12px; align-items: flex-start;"><div style="width: 6px; height: 6px; border-radius: 999px; background: rgb(119, 185, 0); margin-top: 8px; flex-shrink: 0;"></div><span style="font-family: Lora, Georgia, serif; font-size: 14px; line-height: 1.6; color: rgb(75, 85, 96);">The still point is always within reach.</span></div></div><div style="margin-top: 16px; border-left: 3px solid rgb(119, 185, 0); background: rgba(119, 185, 0, 0.15); border-radius: 0px 8px 8px 0px; padding: 11px 15px; font-family: Lora, Georgia, serif; font-style: italic; font-size: 14px; color: rgb(75, 85, 96); line-height: 1.55;">“Very little is needed for a steady life; nearly all of it is where you place your attention.” <span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-style: normal; font-size: 11px; color: rgb(79, 122, 0);">p.34</span></div></div></div></div></div></div></div>
+    <div class="txtcol">
+      <div class="eyebrow"><span class="rule"></span>Study notes</div>
+      <h2 class="dtitle">Export what you learned.</h2>
+      <p class="dsub">AI-synthesized chapter notes, or your raw marks, as a PDF.</p>
+    </div>
+  </section>
+
+  <section class="feat flip">
+    <div class="phcol" style="order:2"><div class="pw"><div class="pf"><div class="ps"><div style="width: 100%; height: 100%; background: rgb(237, 241, 227); display: flex; flex-direction: column;"><div style="height: 32px; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; flex-shrink: 0;"><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(23, 26, 20);">9:41</span><div style="display: flex; align-items: center; gap: 5px;"><svg width="16" height="11" viewBox="0 0 16 11" fill="#171A14"><rect x="0" y="7" width="3" height="4" rx="1"></rect><rect x="4" y="5" width="3" height="6" rx="1"></rect><rect x="8" y="2.5" width="3" height="8.5" rx="1"></rect><rect x="12" y="0" width="3" height="11" rx="1"></rect></svg><svg width="22" height="11" viewBox="0 0 22 11" fill="none"><rect x="0.5" y="0.5" width="18" height="10" rx="2.5" stroke="#171A14" opacity="0.5"></rect><rect x="2" y="2" width="13" height="7" rx="1" fill="#171A14"></rect><rect x="20" y="3.5" width="1.5" height="4" rx="0.75" fill="#171A14" opacity="0.5"></rect></svg></div></div><div style="display: flex; align-items: center; gap: 10px; padding: 6px 16px 4px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4B5560" stroke-width="2.2"><path d="M15 18l-6-6 6-6"></path></svg><span style="font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 22px; color: rgb(23, 26, 20);">Settings</span></div><div style="flex: 1 1 0%; padding: 4px 18px 0px; overflow: hidden;"><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; letter-spacing: 0.6px; color: rgb(152, 160, 168); text-transform: uppercase; margin: 18px 4px 8px;">Appearance</div><div style="background: rgb(245, 247, 239); border-radius: 16px; border: 1px solid rgba(20, 28, 12, 0.1); padding: 14px 15px;"><div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;"><div style="width: 30px; height: 30px; border-radius: 9px; background: rgba(119, 185, 0, 0.15); display: grid; place-items: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4F7A00" stroke-width="1.9"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a4.5 4.5 0 000 9 4.5 4.5 0 010 9"></path></svg></div><span style="flex: 1 1 0%; font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 14.5px; color: rgb(23, 26, 20);">Theme</span><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(121, 130, 138);">Lime</span></div><div style="display: flex; justify-content: space-between;"><div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><div style="width: 46px; height: 46px; border-radius: 999px; background: rgb(237, 241, 227); border: 2.5px solid rgb(119, 185, 0); display: grid; place-items: center;"><div style="width: 15px; height: 15px; border-radius: 999px; background: rgb(119, 185, 0);"></div></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 9px; color: rgb(79, 122, 0);">Lime</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><div style="width: 46px; height: 46px; border-radius: 999px; background: rgb(11, 11, 13); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><div style="width: 15px; height: 15px; border-radius: 999px; background: rgb(245, 182, 58);"></div></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 9px; color: rgb(152, 160, 168);">Onyx</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><div style="width: 46px; height: 46px; border-radius: 999px; background: rgb(14, 17, 22); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><div style="width: 15px; height: 15px; border-radius: 999px; background: rgb(249, 122, 77);"></div></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 9px; color: rgb(152, 160, 168);">Aurora</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><div style="width: 46px; height: 46px; border-radius: 999px; background: rgb(241, 240, 236); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><div style="width: 15px; height: 15px; border-radius: 999px; background: rgb(20, 20, 20);"></div></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 9px; color: rgb(152, 160, 168);">White</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><div style="width: 46px; height: 46px; border-radius: 999px; background: rgb(236, 224, 201); border: 1px solid rgba(20, 28, 12, 0.1); display: grid; place-items: center;"><div style="width: 15px; height: 15px; border-radius: 999px; background: rgb(67, 56, 31);"></div></div><span style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 9px; color: rgb(152, 160, 168);">Sepia</span></div></div></div><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; letter-spacing: 0.6px; color: rgb(152, 160, 168); text-transform: uppercase; margin: 18px 4px 8px;">General</div><div style="background: rgb(245, 247, 239); border-radius: 16px; border: 1px solid rgba(20, 28, 12, 0.1);"><div style="display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-bottom: 1px solid rgba(20, 28, 12, 0.06);"><div style="width: 30px; height: 30px; border-radius: 9px; background: rgba(119, 185, 0, 0.15); display: grid; place-items: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4F7A00" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"></path></svg></div><div style="flex: 1 1 0%; min-width: 0px;"><div style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 14.5px; color: rgb(23, 26, 20);">Language</div><div style="font-family: Outfit, system-ui, sans-serif; font-size: 11.5px; color: rgb(121, 130, 138); margin-top: 1px;">App, AI answers &amp; quizzes</div></div><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(79, 122, 0);">English</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor;"><div style="width: 30px; height: 30px; border-radius: 9px; background: rgba(119, 185, 0, 0.15); display: grid; place-items: center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#4F7A00"><path d="M12 3l1.7 5.1L19 10l-5.3 1.9L12 17l-1.7-5.1L5 10l5.3-1.9z"></path></svg></div><div style="flex: 1 1 0%; min-width: 0px;"><div style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 14.5px; color: rgb(23, 26, 20);">AI processing</div><div style="font-family: Outfit, system-ui, sans-serif; font-size: 11.5px; color: rgb(121, 130, 138); margin-top: 1px;">Cloud AI · retrieval on-device</div></div><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(79, 122, 0);">Cloud</span></div></div><div style="font-family: &quot;DM Mono&quot;, ui-monospace, monospace; font-size: 10px; letter-spacing: 0.6px; color: rgb(152, 160, 168); text-transform: uppercase; margin: 18px 4px 8px;">Audio</div><div style="background: rgb(245, 247, 239); border-radius: 16px; border: 1px solid rgba(20, 28, 12, 0.1);"><div style="display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-bottom: 1px solid rgba(20, 28, 12, 0.06);"><div style="width: 30px; height: 30px; border-radius: 9px; background: rgba(119, 185, 0, 0.15); display: grid; place-items: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4F7A00" stroke-width="1.9"><path d="M3 18v-5a9 9 0 0118 0v5"></path><path d="M18 14h2a1 1 0 011 1v3a1 1 0 01-1 1h-2zM6 14H4a1 1 0 00-1 1v3a1 1 0 001 1h2z"></path></svg></div><div style="flex: 1 1 0%; min-width: 0px;"><div style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 14.5px; color: rgb(23, 26, 20);">Read-aloud voice</div></div><span style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 13px; color: rgb(79, 122, 0);">On-device</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor;"><div style="width: 30px; height: 30px; border-radius: 9px; background: rgba(119, 185, 0, 0.15); display: grid; place-items: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#4F7A00" stroke-width="1.8"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 01-3.4 0"></path></svg></div><div style="flex: 1 1 0%; min-width: 0px;"><div style="font-family: Outfit, system-ui, sans-serif; font-weight: 600; font-size: 14.5px; color: rgb(23, 26, 20);">Daily review reminder</div><div style="font-family: Outfit, system-ui, sans-serif; font-size: 11.5px; color: rgb(121, 130, 138); margin-top: 1px;">Only when cards are due</div></div><div style="width: 42px; height: 25px; border-radius: 999px; background: rgb(119, 185, 0); border: 1px solid rgba(20, 28, 12, 0.1); position: relative;"><div style="position: absolute; top: 2px; left: 19px; width: 20px; height: 20px; border-radius: 999px; background: rgb(21, 33, 10); box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;"></div></div></div></div></div></div></div></div></div></div>
+    <div class="txtcol">
+      <div class="eyebrow"><span class="rule"></span>Yours to shape</div>
+      <h2 class="dtitle">Five themes, nine languages.</h2>
+      <p class="dsub">Tune appearance, language, voice and daily reminders.</p>
+    </div>
+  </section>
+
+<!-- ===================== PRIVACY ===================== -->
+<section class="privacy" id="privacy">
+  <div class="wrap">
+    <div class="lockbox">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 018 0v3"/><circle cx="12" cy="15.5" r="1.4"/></svg>
+    </div>
+    <h2 class="ptitle">Your books stay on your phone.</h2>
+    <p class="psub">Search runs on your device. Only your question and the matching passages ever reach the AI.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">On your device</div><div class="d">files &middot; text &middot; index</div></div>
+      <div class="stat"><div class="n">Only matches</div><div class="d">your question + passages</div></div>
+      <div class="stat"><div class="n">Never stored</div><div class="d">the cloud holds no books</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="phead">
+      <div class="eyebrow"><span class="rule"></span>Pricing</div>
+      <h2 class="dtitle">Reading is free. Always.</h2>
+      <p class="dsub" style="text-align:center">Pro adds unlimited AI and audio. No auto-renewal, ever.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <div class="pname">Free</div>
+        <div class="price">&#8377;0</div>
+        <div class="per">Forever</div>
+        <ul>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Unlimited reading, highlights and notes</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Flashcards, vocabulary and spaced repetition</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>On-device X-ray search across every book</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>5 AI uses per month</span></li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <span class="tag">Pro</span>
+        <div class="pname">30-day pass</div>
+        <div class="price">Regional</div>
+        <div class="per">Priced for where you live, shown before you pay</div>
+        <ul>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Everything in Free</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Unlimited Ask, Explain and quiz generation</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Audio Overview and read-aloud narration</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>A pass, not a subscription. Nothing auto-charges.</span></li>
+        </ul>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ===================== HERO ===================== -->
-  <div style="position:relative; background:radial-gradient(1200px 720px at 50% -12%, var(--c18,#FFFFFF) 0%, var(--c19,#F6F8F1) 48%, var(--c9,#EDEFE9) 100%);">
-    <div style="position:absolute; top:-60px; left:50%; transform:translateX(-50%); width:760px; height:520px; background:radial-gradient(circle, var(--c20,rgba(119,185,0,0.13)), transparent 64%); pointer-events:none;"></div>
-
-    <div style="max-width:1180px; margin:0 auto; padding:72px 32px 84px; position:relative; display:grid; grid-template-columns:1.05fr 0.95fr; gap:48px; align-items:center;">
-
-      <!-- left: copy -->
-      <div style="min-width:0;">
-        <div style="display:inline-flex; align-items:center; gap:9px; height:32px; padding:0 15px; border-radius:999px; background:var(--c21,rgba(119,185,0,0.1)); border:1px solid var(--c1,rgba(119,185,0,0.28));">
-          <span style="position:relative; display:inline-flex; width:6px; height:6px;">
-            <span style="position:absolute; inset:0; border-radius:50%; background:var(--c16,#77B900); animation:kxPing 1.9s cubic-bezier(0,0,0.2,1) infinite;"></span>
-            <span style="position:relative; width:6px; height:6px; border-radius:50%; background:var(--c16,#77B900);"></span>
-          </span>
-          <span style="font-family:'DM Mono',monospace; font-size:10.5px; font-weight:500; letter-spacing:1.2px; color:var(--c15,#4F7A00); text-transform:uppercase;">Pre-launch</span>
-          <span style="width:1px; height:13px; background:var(--c1,rgba(119,185,0,0.28));"></span>
-          <span style="font-family:'Outfit',sans-serif; font-size:13px; font-weight:500; letter-spacing:0.2px; color:var(--c2,#4B5560);">Private AI reader</span>
-        </div>
-
-        <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:60px; line-height:1.04; letter-spacing:-2px; color:var(--c3,#1B1A14); margin:22px 0 0;">Read it once.<br>Remember it<br><span style="color:var(--c15,#4F7A00);">for good.</span></h1>
-
-        <p style="font-size:18px; line-height:1.62; color:var(--c2,#4B5560); max-width:480px; margin:22px 0 0;">Krixo turns your PDFs, EPUBs and web articles into lasting knowledge. Every highlight quietly becomes a <span style="color:var(--c3,#1B1A14); font-weight:500;">quiz card</span>, scheduled by spaced repetition so you review each idea right before you'd forget it.</p>
-
-        <!-- waitlist / cta -->
-        <div id="waitlist" style="margin-top:30px; scroll-margin-top:90px;">
-          <div class="wl-region">
-            <div>
-              <div class="wl-form-wrap">
-                <form class="wl-formEl" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate style="display:flex; gap:10px; max-width:460px;">
-                  <input type="hidden" name="form-name" value="waitlist">
-                  <input type="hidden" name="source" value="hero">
-                  <p style="display:none;"><label>Leave this empty <input name="bot-field"></label></p>
-                  <input class="kx-input wl-email" type="email" name="email" required placeholder="you@email.com" style="flex:1; min-width:0; height:52px; padding:0 18px; border-radius:13px; background:var(--c22,#FFFFFF); border:1px solid var(--c23,rgba(20,28,12,0.12)); color:var(--c10,#171A14); font-family:'Outfit',sans-serif; font-size:15.5px;">
-                  <button class="kx-navcta" type="submit" style="flex:none; height:52px; padding:0 24px; border:none; border-radius:13px; background:var(--c16,#77B900); color:var(--c17,#15210A); font-family:'Outfit',sans-serif; font-weight:600; font-size:15.5px; cursor:pointer;">Join the waitlist</button>
-                </form>
-              </div>
-              <div class="wl-done-wrap" style="display:none;">
-                <div style="display:inline-flex; align-items:center; gap:11px; height:52px; padding:0 22px; border-radius:13px; background:rgba(45,212,191,0.1); border:1px solid rgba(45,212,191,0.4);">
-                  <span style="width:24px; height:24px; border-radius:7px; background:rgba(45,212,191,0.2); display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                  <span style="font-size:15.5px; color:var(--c24,#0C3A33); font-weight:500;">You're on the list - we'll email you at launch.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-
-          <div style="display:flex; align-items:center; gap:14px; margin-top:16px; flex-wrap:wrap;">
-            <span style="font-size:13.5px; color:var(--c25,#79828A);">2,400+ readers already on the list</span>
-            <span style="width:4px; height:4px; border-radius:50%; background:var(--c26,#C7CBC0);"></span>
-            <span style="display:inline-flex; align-items:center; gap:7px; font-size:13px; color:var(--c7,#98A0A8);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--c7,#98A0A8)" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>Android first - iOS &amp; desktop coming next</span>
-          </div>
-        </div>
-
-        <!-- mini trust row -->
-        <div style="display:flex; gap:24px; margin-top:34px; flex-wrap:wrap;">
-          <div style="display:flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="2"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg><span style="font-size:13.5px; color:var(--c2,#4B5560);">Private by design</span></div>
-          <div style="display:flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="2"><path d="M5 12h14M12 5v14" stroke-opacity="0"/><path d="M3 12a9 9 0 0118 0M7 12a5 5 0 0110 0"/><circle cx="12" cy="12" r="1.6" fill="var(--c15,#4F7A00)"/></svg><span style="font-size:13.5px; color:var(--c2,#4B5560);">Read &amp; listen offline</span></div>
-          <div style="display:flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="2"><path d="M3 12a9 9 0 109-9"/><path d="M12 7v5l3 2"/></svg><span style="font-size:13.5px; color:var(--c2,#4B5560);">FSRS spaced repetition</span></div>
-        </div>
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final" id="waitlist">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center"><span class="rule"></span>Waitlist</div>
+    <h2 class="ptitle">Read it once. Remember it for good.</h2>
+    <p class="psub">Join 2,400+ readers already on the list. One email, at launch.</p>
+    <div class="wl-region">
+      <div class="wl-form-wrap">
+        <form class="wl-formEl" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="waitlist">
+          <input type="hidden" name="source" value="footer-cta">
+          <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
+          <input class="kx-input wl-email" type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
+          <button class="kx-cta" type="submit">Join the waitlist</button>
+        </form>
+        <div class="wl-note">No spam. One email, at launch.</div>
       </div>
-
-      <!-- right: phone mockup -->
-      <div style="display:flex; justify-content:center; min-width:0;">
-        <div style="position:relative; width:312px; height:632px; border-radius:46px; background:#0B0B0D; border:1px solid var(--c27,rgba(20,28,12,0.1)); box-shadow:0 50px 100px var(--c28,rgba(20,28,12,0.16)), inset 0 0 0 4px #050507; animation:kxFloat 6s ease-in-out infinite;">
-          <div style="position:absolute; top:-30px; left:50%; transform:translateX(-50%); width:340px; height:280px; background:radial-gradient(circle, var(--c29,rgba(119,185,0,0.16)), transparent 62%); pointer-events:none;"></div>
-          <div style="position:absolute; top:11px; left:50%; transform:translateX(-50%); width:104px; height:28px; border-radius:18px; background:#000; z-index:5;"></div>
-          <!-- screen -->
-          <div style="position:absolute; inset:9px; border-radius:38px; background:var(--c30,#FFFFFF); overflow:hidden;">
-            <!-- top bar -->
-            <div style="padding:44px 20px 14px; display:flex; align-items:center; justify-content:space-between;">
-              <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px;"><span style="color:var(--c10,#171A14);">kri</span><span style="color:var(--c15,#4F7A00);">x</span><span style="color:var(--c10,#171A14);">o</span></span>
-              <span style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:1px; color:var(--c15,#4F7A00); background:var(--c21,rgba(119,185,0,0.1)); border:1px solid var(--c31,rgba(119,185,0,0.26)); padding:4px 8px; border-radius:7px;">3 DUE TODAY</span>
-            </div>
-            <!-- recall ring card -->
-            <div style="margin:6px 16px 0; background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:20px; padding:20px; display:flex; flex-direction:column; align-items:center;">
-              <div style="position:relative; width:124px; height:124px;">
-                <svg width="124" height="124" viewBox="0 0 124 124" style="transform:rotate(-90deg);"><circle cx="62" cy="62" r="52" fill="none" stroke="var(--c34,rgba(20,28,12,0.08))" stroke-width="9"/><circle cx="62" cy="62" r="52" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="9" stroke-linecap="round" stroke-dasharray="327" style="animation:kxRing 2.4s cubic-bezier(.2,.7,.2,1) forwards;"/></svg>
-                <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;"><span style="font-family:'Fraunces',serif; font-weight:600; font-size:32px; color:var(--c3,#1B1A14);">88%</span><span style="font-family:'DM Mono',monospace; font-size:8px; letter-spacing:1px; color:var(--c25,#79828A); margin-top:2px;">RETAINED</span></div>
-              </div>
-              <span style="font-size:12.5px; color:var(--c35,#79828A); margin-top:6px;">Your memory, on track</span>
-            </div>
-            <!-- quiz card -->
-            <div style="margin:12px 16px 0; background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:18px; padding:16px;">
-              <div style="display:flex; align-items:center; gap:6px; margin-bottom:11px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="var(--c15,#4F7A00)"><path d="M12 3l1.7 5.1L19 10l-5.3 1.9L12 17l-1.7-5.1L5 10l5.3-1.9z"/></svg><span style="font-family:'DM Mono',monospace; font-size:8.5px; letter-spacing:1px; color:var(--c36,#6E8A3A);">QUIZ · FROM YOUR HIGHLIGHT</span></div>
-              <div style="font-family:'Lora',serif; font-size:14px; color:var(--c37,#20201A); line-height:1.4;">Where in a plant cell does photosynthesis occur?</div>
-              <div style="display:flex; flex-direction:column; gap:8px; margin-top:13px;">
-                <div style="display:flex; align-items:center; gap:9px; padding:10px 12px; border-radius:11px; background:rgba(45,212,191,0.12); border:1px solid rgba(45,212,191,0.42);"><span style="width:18px; height:18px; border-radius:6px; background:rgba(45,212,191,0.22); display:flex; align-items:center; justify-content:center; flex:none;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span style="font-size:12.5px; color:var(--c24,#0C3A33);">In the chloroplast</span></div>
-                <div style="padding:10px 12px; border-radius:11px; background:var(--c38,#EDF1E3); border:1px solid var(--c12,rgba(20,28,12,0.06)); font-size:12.5px; color:var(--c39,#79828A);">In the mitochondrion</div>
-              </div>
-            </div>
-          </div>
-          <!-- home indicator -->
-          <div style="position:absolute; bottom:9px; left:50%; transform:translateX(-50%); width:120px; height:5px; border-radius:3px; background:var(--c40,rgba(20,28,12,0.3));"></div>
-        </div>
+      <div class="wl-done-wrap" hidden>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        <span>You're on the list. We'll email you once, at launch.</span>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ===================== LOOP STRIP ===================== -->
-  <div style="border-top:1px solid var(--c12,rgba(20,28,12,0.06)); border-bottom:1px solid var(--c12,rgba(20,28,12,0.06)); background:var(--c41,#F6F8F1);">
-    <div style="max-width:1180px; margin:0 auto; padding:30px 32px; display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap;">
-      <span style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px; color:var(--c7,#98A0A8); text-transform:uppercase;">One loop, one app</span>
-      <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; color:var(--c2,#4B5560);">Read</span>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; color:var(--c42,#3C4640);">Understand</span>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:19px; color:var(--c15,#4F7A00);">Remember</span>
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <div class="footin">
+    <div class="footbrand">
+      <svg width="22" height="22" viewBox="0 0 48 48" fill="none"><path d="M13 14l22 20" stroke="var(--signalD)" stroke-width="4.4" stroke-linecap="round"/><path d="M35 14L13 34" stroke="var(--muted)" stroke-width="4.4" stroke-linecap="round"/></svg>
+      <span class="wordmark" style="font-size:17px">kri<span class="x">x</span>o</span>
+      <span class="foottag">Read &middot; Understand &middot; Remember</span>
     </div>
-  </div>
-
-  <!-- ===================== SCREENS GALLERY ===================== -->
-  <div id="screens" style="scroll-margin-top:74px; background:var(--c9,#EDEFE9);">
-    <div style="max-width:1180px; margin:0 auto; padding:90px 32px;">
-      <div style="text-align:center; margin-bottom:48px;">
-        <div style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:2px; color:var(--c15,#4F7A00); text-transform:uppercase;">A look inside</div>
-        <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:40px; letter-spacing:-1.3px; color:var(--c3,#1B1A14); margin:14px 0 0;">See Krixo in action.</h2>
-        <p style="font-size:16.5px; color:var(--c2,#4B5560); margin:14px auto 0; max-width:520px;">From your shelf, to a sentence you highlight, to a quiz that writes itself - the whole loop on one phone.</p>
-      </div>
-
-      <div style="display:flex; gap:30px; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
-
-        <!-- PHONE 1 · LIBRARY -->
-        <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
-          <div style="position:relative; width:280px; height:582px; border-radius:42px; background:#0B0B0D; border:1px solid var(--c27,rgba(20,28,12,0.1)); box-shadow:0 36px 80px var(--c43,rgba(20,28,12,0.14)), inset 0 0 0 3px #050507;">
-            <div style="position:absolute; top:10px; left:50%; transform:translateX(-50%); width:90px; height:24px; border-radius:16px; background:#000; z-index:5;"></div>
-            <div style="position:absolute; inset:8px; border-radius:36px; background:var(--c41,#F6F8F1); overflow:hidden;">
-              <div style="padding:40px 16px 0;">
-                <div style="display:flex; align-items:center; justify-content:space-between;">
-                  <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px;"><span style="color:var(--c10,#171A14);">kri</span><span style="color:var(--c15,#4F7A00);">x</span><span style="color:var(--c10,#171A14);">o</span></span>
-                  <div style="width:30px; height:30px; border-radius:9px; background:var(--c32,#FFFFFF); border:1px solid var(--c34,rgba(20,28,12,0.08)); display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--c35,#79828A)" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-                </div>
-                <div style="margin-top:16px; background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:18px; padding:13px; display:flex; gap:12px; align-items:center;">
-                  <div style="width:46px; height:64px; border-radius:6px; background:linear-gradient(150deg,#CC562F,#6E2A18); box-shadow:0 6px 14px var(--c44,rgba(20,28,12,0.09)); flex:none;"></div>
-                  <div style="flex:1; min-width:0;">
-                    <div style="font-family:'DM Mono',monospace; font-size:8px; letter-spacing:1px; color:var(--c15,#4F7A00);">CONTINUE READING</div>
-                    <div style="font-family:'Lora',serif; font-weight:600; font-size:15px; color:var(--c10,#171A14); margin-top:4px;">Sapiens</div>
-                    <div style="font-size:11px; color:var(--c25,#79828A);">Yuval Noah Harari</div>
-                    <div style="height:4px; border-radius:3px; background:var(--c45,#E2E5DB); margin-top:9px; overflow:hidden;"><div style="width:38%; height:100%; background:var(--c16,#77B900);"></div></div>
-                  </div>
-                </div>
-                <div style="margin-top:11px; display:grid; grid-template-columns:1fr 1fr; gap:9px;">
-                  <div style="background:var(--c32,#FFFFFF); border:1px solid var(--c34,rgba(20,28,12,0.08)); border-radius:13px; padding:11px 12px; display:flex; align-items:center; gap:8px;">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-11.9 7.6L3 21l1.9-6.1A8.4 8.4 0 1121 11.5z"/></svg>
-                    <span style="font-size:11.5px; font-weight:600; color:var(--c10,#171A14);">Ask the library</span>
-                  </div>
-                  <div style="background:var(--c32,#FFFFFF); border:1px solid var(--c34,rgba(20,28,12,0.08)); border-radius:13px; padding:11px 12px; display:flex; align-items:center; gap:8px;">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-                    <span style="font-size:11.5px; font-weight:600; color:var(--c10,#171A14);">X-ray</span>
-                  </div>
-                  <div style="background:var(--c32,#FFFFFF); border:1px solid var(--c34,rgba(20,28,12,0.08)); border-radius:13px; padding:11px 12px; display:flex; align-items:center; gap:8px;">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.6.6 1 1.3 1 2.5h6c0-1.2.4-1.9 1-2.5A6 6 0 0012 3z"/></svg>
-                    <span style="font-size:11.5px; font-weight:600; color:var(--c10,#171A14);">Concepts &amp; Words</span>
-                  </div>
-                  <div style="background:var(--c32,#FFFFFF); border:1px solid var(--c34,rgba(20,28,12,0.08)); border-radius:13px; padding:11px 12px; display:flex; align-items:center; gap:8px;">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>
-                    <span style="font-size:11.5px; font-weight:600; color:var(--c10,#171A14);">Quiz · 3</span>
-                  </div>
-                </div>
-                <div style="font-family:'DM Mono',monospace; font-size:9px; letter-spacing:1.5px; color:var(--c7,#98A0A8); margin:16px 2px 11px;">YOUR BOOKS</div>
-                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
-                  <div style="height:108px; border-radius:9px; background:linear-gradient(150deg,#1F9384,#0C3A33); box-shadow:0 6px 16px var(--c44,rgba(20,28,12,0.09)); padding:10px; display:flex; align-items:flex-end;"><span style="font-family:'Lora',serif; font-weight:600; font-size:11.5px; color:#fff; line-height:1.2;">Atomic Habits</span></div>
-                  <div style="height:108px; border-radius:9px; background:linear-gradient(150deg,#3A5699,#16264D); box-shadow:0 6px 16px var(--c44,rgba(20,28,12,0.09)); padding:10px; display:flex; align-items:flex-end;"><span style="font-family:'Lora',serif; font-weight:600; font-size:11.5px; color:#fff; line-height:1.2;">Thinking, Fast and Slow</span></div>
-                  <div style="height:108px; border-radius:9px; background:linear-gradient(150deg,#63509B,#2C2150); box-shadow:0 6px 16px var(--c44,rgba(20,28,12,0.09)); padding:10px; display:flex; align-items:flex-end;"><span style="font-family:'Lora',serif; font-weight:600; font-size:11.5px; color:#fff; line-height:1.2;">Meditations</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style="text-align:center;"><div style="font-weight:600; font-size:14.5px; color:var(--c10,#171A14);">Your library</div><div style="font-size:12.5px; color:var(--c25,#79828A); margin-top:2px;">Every book, on your device</div></div>
-        </div>
-
-        <!-- PHONE 2 · READER -->
-        <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
-          <div style="position:relative; width:280px; height:582px; border-radius:42px; background:#0B0B0D; border:1px solid var(--c27,rgba(20,28,12,0.1)); box-shadow:0 36px 80px var(--c43,rgba(20,28,12,0.14)), inset 0 0 0 3px #050507;">
-            <div style="position:absolute; top:10px; left:50%; transform:translateX(-50%); width:90px; height:24px; border-radius:16px; background:#000; z-index:5;"></div>
-            <div style="position:absolute; inset:8px; border-radius:36px; background:var(--c46,#FAF8F2); overflow:hidden;">
-              <div style="padding:40px 18px 12px; display:flex; align-items:center; gap:10px; border-bottom:1px solid var(--c12,rgba(20,28,12,0.06));">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c35,#79828A)" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg>
-                <div style="flex:1; text-align:center;"><div style="font-weight:600; font-size:13px; color:var(--c47,#20201A);">Sapiens</div><div style="font-family:'DM Mono',monospace; font-size:9px; color:var(--c25,#79828A);">Chapter 1 · 38%</div></div>
-                <span style="font-family:'Lora',serif; font-weight:600; font-size:14px; color:var(--c35,#79828A);">Aa</span>
-              </div>
-              <div style="padding:18px 20px;">
-                <div style="font-family:'DM Mono',monospace; font-size:9px; letter-spacing:2px; color:var(--c48,#6E8A3A);">CHAPTER ONE</div>
-                <div style="font-family:'Lora',serif; font-weight:600; font-size:21px; line-height:1.18; color:var(--c37,#20201A); margin-top:9px;">An Animal of No Significance</div>
-                <div style="width:38px; height:3px; background:var(--c48,#6E8A3A); border-radius:2px; margin:14px 0 16px; opacity:0.8;"></div>
-                <p style="font-family:'Lora',serif; font-size:13px; line-height:1.74; color:var(--c49,#4B5560); margin:0;">For most of history, humans were unremarkable animals living quietly on the African savannah.</p>
-                <p style="font-family:'Lora',serif; font-size:13px; line-height:1.74; color:var(--c49,#4B5560); margin:13px 0 0;">Then, around 70,000 years ago, <span style="background:var(--c31,rgba(119,185,0,0.26)); box-shadow:0 0 0 2px var(--c31,rgba(119,185,0,0.26)); border-radius:2px; color:var(--c3,#1B1A14);">a leap in language and imagination let large numbers of strangers cooperate</span> - the Cognitive Revolution.</p>
-                <p style="font-family:'Lora',serif; font-size:13px; line-height:1.74; color:var(--c49,#4B5560); margin:13px 0 0;">That shared fiction, more than any tool, is what set our species apart.</p>
-              </div>
-              <div style="position:absolute; left:14px; right:14px; bottom:14px; background:var(--c50,#F2F7E8); border:1px solid var(--c1,rgba(119,185,0,0.28)); border-radius:16px; padding:14px; box-shadow:0 16px 36px var(--c51,rgba(20,28,12,0.12));">
-                <div style="display:flex; align-items:center; gap:7px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--c15,#4F7A00)"><path d="M12 3l1.7 5.1L19 10l-5.3 1.9L12 17l-1.7-5.1L5 10l5.3-1.9z"/></svg><span style="font-family:'Lora',serif; font-weight:600; font-size:13.5px; color:var(--c52,#233A0A);">Krixo explains</span></div>
-                <div style="font-size:12.5px; line-height:1.55; color:var(--c53,#3A4038); margin-top:9px;">The “Cognitive Revolution” is the moment our ancestors gained flexible language - letting them share ideas, plans and myths at scale.</div>
-                <span style="display:inline-flex; margin-top:11px; height:22px; padding:0 9px; align-items:center; border-radius:6px; background:var(--c54,rgba(119,185,0,0.12)); border:1px solid var(--c55,rgba(119,185,0,0.3)); font-family:'DM Mono',monospace; font-size:9px; color:var(--c15,#4F7A00);">Sapiens · p.21</span>
-              </div>
-            </div>
-          </div>
-          <div style="text-align:center;"><div style="font-weight:600; font-size:14.5px; color:var(--c10,#171A14);">Read &amp; understand</div><div style="font-size:12.5px; color:var(--c25,#79828A); margin-top:2px;">Highlight, then ask AI to explain</div></div>
-        </div>
-
-        <!-- PHONE 3 · MASTERY -->
-        <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
-          <div style="position:relative; width:280px; height:582px; border-radius:42px; background:#0B0B0D; border:1px solid var(--c27,rgba(20,28,12,0.1)); box-shadow:0 36px 80px var(--c43,rgba(20,28,12,0.14)), inset 0 0 0 3px #050507;">
-            <div style="position:absolute; top:10px; left:50%; transform:translateX(-50%); width:90px; height:24px; border-radius:16px; background:#000; z-index:5;"></div>
-            <div style="position:absolute; inset:8px; border-radius:36px; background:var(--c41,#F6F8F1); overflow:hidden;">
-              <div style="padding:40px 16px 0;">
-                <div style="display:flex; align-items:center; justify-content:space-between;">
-                  <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; color:var(--c3,#1B1A14);">Mastery</span>
-                  <span style="display:inline-flex; align-items:center; gap:5px; font-size:11px; color:var(--c15,#4F7A00); background:var(--c21,rgba(119,185,0,0.1)); border:1px solid var(--c31,rgba(119,185,0,0.26)); padding:5px 9px; border-radius:8px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="var(--c15,#4F7A00)"><path d="M13 2L4.5 13H11l-1 9 8.5-11H12z"/></svg>7</span>
-                </div>
-                <div style="margin-top:16px; background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:18px; padding:18px; display:flex; align-items:center; gap:18px;">
-                  <div style="position:relative; width:84px; height:84px; flex:none;">
-                    <svg width="84" height="84" viewBox="0 0 84 84" style="transform:rotate(-90deg);"><circle cx="42" cy="42" r="35" fill="none" stroke="var(--c34,rgba(20,28,12,0.08))" stroke-width="7"/><circle cx="42" cy="42" r="35" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="7" stroke-linecap="round" stroke-dasharray="194 220"/></svg>
-                    <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;"><span style="font-family:'Fraunces',serif; font-weight:600; font-size:22px; color:var(--c3,#1B1A14);">88%</span></div>
-                  </div>
-                  <div style="flex:1;"><div style="font-size:13px; color:var(--c42,#3C4640); line-height:1.4;">Knowledge retained across your library</div><div style="font-size:11px; color:var(--c25,#79828A); margin-top:6px;">9 concepts mastered · 142 reviews</div></div>
-                </div>
-                <div style="font-family:'DM Mono',monospace; font-size:9px; letter-spacing:1.5px; color:var(--c7,#98A0A8); margin:18px 2px 12px;">CONCEPTS</div>
-                <div style="display:flex; flex-direction:column; gap:11px;">
-                  <div><div style="display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Lora',serif; font-size:13.5px; color:var(--c10,#171A14);">The Cognitive Revolution</span><span style="font-family:'DM Mono',monospace; font-size:8.5px; color:#2DD4BF; background:rgba(45,212,191,0.12); border:1px solid rgba(45,212,191,0.34); padding:3px 7px; border-radius:6px;">MASTERED</span></div><div style="height:5px; border-radius:3px; background:var(--c38,#EDF1E3); margin-top:7px; overflow:hidden;"><div style="width:100%; height:100%; background:#2DD4BF;"></div></div></div>
-                  <div><div style="display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Lora',serif; font-size:13.5px; color:var(--c10,#171A14);">Compound habits</span><span style="font-family:'DM Mono',monospace; font-size:8.5px; color:var(--c15,#4F7A00); background:var(--c21,rgba(119,185,0,0.1)); border:1px solid var(--c55,rgba(119,185,0,0.3)); padding:3px 7px; border-radius:6px;">GROWING</span></div><div style="height:5px; border-radius:3px; background:var(--c38,#EDF1E3); margin-top:7px; overflow:hidden;"><div style="width:62%; height:100%; background:var(--c16,#77B900);"></div></div></div>
-                  <div><div style="display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Lora',serif; font-size:13.5px; color:var(--c10,#171A14);">Entropy &amp; time's arrow</span><span style="font-family:'DM Mono',monospace; font-size:8.5px; color:var(--c35,#79828A); background:var(--c56,rgba(20,28,12,0.05)); border:1px solid var(--c23,rgba(20,28,12,0.12)); padding:3px 7px; border-radius:6px;">LEARNING</span></div><div style="height:5px; border-radius:3px; background:var(--c38,#EDF1E3); margin-top:7px; overflow:hidden;"><div style="width:32%; height:100%; background:var(--c35,#79828A);"></div></div></div>
-                  <div><div style="display:flex; align-items:center; justify-content:space-between;"><span style="font-family:'Lora',serif; font-size:13.5px; color:var(--c10,#171A14);">The dichotomy of control</span><span style="font-family:'DM Mono',monospace; font-size:8.5px; color:var(--c35,#79828A); background:var(--c56,rgba(20,28,12,0.05)); border:1px solid var(--c23,rgba(20,28,12,0.12)); padding:3px 7px; border-radius:6px;">NEW</span></div><div style="height:5px; border-radius:3px; background:var(--c38,#EDF1E3); margin-top:7px; overflow:hidden;"><div style="width:14%; height:100%; background:var(--c35,#79828A);"></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style="text-align:center;"><div style="font-weight:600; font-size:14.5px; color:var(--c10,#171A14);">Watch mastery grow</div><div style="font-size:12.5px; color:var(--c25,#79828A); margin-top:2px;">Every idea, from new to mastered</div></div>
-        </div>
-
-      </div>
+    <div class="footer-links">
+      <a href="#pricing">Pricing</a>
+      <a href="#waitlist">Waitlist</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms</a>
+      <a href="mailto:support@krixo.in">Contact us</a>
     </div>
+    <span class="copy">&copy; 2026 Krixo</span>
   </div>
+</footer>
 
-  <!-- ===================== FLAGSHIP: RETENTION / QUIZ ===================== -->
-  <div id="retain" style="scroll-margin-top:74px; background:radial-gradient(900px 600px at 82% 8%, var(--c57,#F3F5EE) 0%, var(--c9,#EDEFE9) 60%);">
-    <div style="max-width:1180px; margin:0 auto; padding:96px 32px;">
-      <div style="display:inline-flex; align-items:center; gap:8px; height:28px; padding:0 12px; border-radius:999px; background:var(--c21,rgba(119,185,0,0.1)); border:1px solid var(--c31,rgba(119,185,0,0.26)); margin-bottom:18px;">
-        <span style="font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:1.5px; color:var(--c15,#4F7A00); text-transform:uppercase;">★ The main event</span>
-      </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;">
-        <div style="min-width:0;">
-          <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:43px; line-height:1.08; letter-spacing:-1.4px; color:var(--c3,#1B1A14); margin:0;">Knowledge retention,<br>built into reading.</h2>
-          <p style="font-size:17.5px; line-height:1.64; color:var(--c2,#4B5560); margin:20px 0 0; max-width:460px;">Most apps help you read. Krixo helps you <span style="color:var(--c3,#1B1A14); font-weight:500;">keep what you read.</span> Every highlight, note and AI explanation is automatically turned into quiz questions, then scheduled by <span style="color:var(--c15,#4F7A00);">FSRS-6</span> - the gold-standard spaced-repetition algorithm - so each idea resurfaces exactly when you're about to forget it.</p>
-          <div style="display:flex; flex-direction:column; gap:14px; margin-top:28px;">
-            <div style="display:flex; gap:13px; align-items:flex-start;"><span style="width:26px; height:26px; border-radius:8px; background:var(--c54,rgba(119,185,0,0.12)); display:flex; align-items:center; justify-content:center; flex:none; margin-top:1px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--c15,#4F7A00)"><path d="M12 3l1.7 5.1L19 10l-5.3 1.9L12 17l-1.7-5.1L5 10l5.3-1.9z"/></svg></span><div><div style="font-weight:600; font-size:15.5px; color:var(--c10,#171A14);">Zero-effort deck</div><div style="font-size:14px; color:var(--c39,#79828A); margin-top:2px;">Highlight a sentence - a quiz card writes itself. No manual card-making.</div></div></div>
-            <div style="display:flex; gap:13px; align-items:flex-start;"><span style="width:26px; height:26px; border-radius:8px; background:var(--c54,rgba(119,185,0,0.12)); display:flex; align-items:center; justify-content:center; flex:none; margin-top:1px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="2.4"><path d="M3 12a9 9 0 109-9"/><path d="M12 7v5l3 2"/></svg></span><div><div style="font-weight:600; font-size:15.5px; color:var(--c10,#171A14);">Reviewed at the right moment</div><div style="font-size:14px; color:var(--c39,#79828A); margin-top:2px;">FSRS predicts your forgetting curve and times each review for maximum recall.</div></div></div>
-            <div style="display:flex; gap:13px; align-items:flex-start;"><span style="width:26px; height:26px; border-radius:8px; background:var(--c54,rgba(119,185,0,0.12)); display:flex; align-items:center; justify-content:center; flex:none; margin-top:1px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="2.4"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><div><div style="font-weight:600; font-size:15.5px; color:var(--c10,#171A14);">Watch mastery grow</div><div style="font-size:14px; color:var(--c39,#79828A); margin-top:2px;">A maturity view per book + a daily streak keep the habit loop alive.</div></div></div>
-          </div>
-        </div>
-
-        <!-- visual: review session -->
-        <div style="min-width:0;">
-          <div style="background:var(--c32,#FFFFFF); border:1px solid var(--c34,rgba(20,28,12,0.08)); border-radius:24px; padding:26px; box-shadow:0 30px 70px var(--c51,rgba(20,28,12,0.12));">
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;">
-              <span style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px; color:var(--c36,#6E8A3A);">DAILY REVIEW</span>
-              <span style="display:inline-flex; align-items:center; gap:6px; font-size:12px; color:var(--c15,#4F7A00);"><svg width="13" height="13" viewBox="0 0 24 24" fill="var(--c15,#4F7A00)"><path d="M13 2L4.5 13H11l-1 9 8.5-11H12z"/></svg>7-day streak</span>
-            </div>
-            <!-- mcq -->
-            <div style="font-family:'Lora',serif; font-size:18px; line-height:1.45; color:var(--c37,#20201A);">In FSRS, which two values model a memory?</div>
-            <div style="display:flex; flex-direction:column; gap:10px; margin-top:18px;">
-              <div style="display:flex; align-items:center; gap:11px; padding:13px 15px; border-radius:13px; background:rgba(45,212,191,0.12); border:1px solid rgba(45,212,191,0.42);"><span style="width:20px; height:20px; border-radius:6px; background:rgba(45,212,191,0.22); display:flex; align-items:center; justify-content:center; flex:none;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span style="font-size:14.5px; color:var(--c24,#0C3A33);">Stability &amp; difficulty</span></div>
-              <div style="padding:13px 15px; border-radius:13px; background:var(--c38,#EDF1E3); border:1px solid var(--c12,rgba(20,28,12,0.06)); font-size:14.5px; color:var(--c39,#79828A);">Ease &amp; interval</div>
-              <div style="padding:13px 15px; border-radius:13px; background:var(--c38,#EDF1E3); border:1px solid var(--c12,rgba(20,28,12,0.06)); font-size:14.5px; color:var(--c39,#79828A);">Streak &amp; lapses</div>
-            </div>
-            <!-- grade row -->
-            <div style="display:flex; gap:9px; margin-top:20px;">
-              <div style="flex:1; text-align:center; padding:11px 0; border-radius:11px; background:var(--c38,#EDF1E3); border:1px solid rgba(229,90,70,0.3); font-size:13px; color:#E58A7c;">Again</div>
-              <div style="flex:1; text-align:center; padding:11px 0; border-radius:11px; background:var(--c38,#EDF1E3); border:1px solid var(--c34,rgba(20,28,12,0.08)); font-size:13px; color:var(--c2,#4B5560);">Hard</div>
-              <div style="flex:1; text-align:center; padding:11px 0; border-radius:11px; background:var(--c16,#77B900); font-size:13px; font-weight:600; color:var(--c17,#15210A);">Got it</div>
-            </div>
-            <div style="margin-top:18px; padding-top:16px; border-top:1px solid var(--c12,rgba(20,28,12,0.06)); display:flex; align-items:center; justify-content:space-between;">
-              <span style="font-size:12.5px; color:var(--c25,#79828A);">Next review</span>
-              <span style="font-family:'DM Mono',monospace; font-size:12.5px; color:var(--c15,#4F7A00);">in 9 days →</span>
-            </div>
-          </div>
-          <div style="display:flex; gap:12px; margin-top:14px;">
-            <div style="flex:1; background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:14px; padding:14px 16px;"><div style="font-family:'Fraunces',serif; font-size:24px; color:var(--c3,#1B1A14);">142</div><div style="font-size:11.5px; color:var(--c25,#79828A); margin-top:2px;">cards reviewed</div></div>
-            <div style="flex:1; background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:14px; padding:14px 16px;"><div style="font-family:'Fraunces',serif; font-size:24px; color:var(--c3,#1B1A14);">9</div><div style="font-size:11.5px; color:var(--c25,#79828A); margin-top:2px;">concepts mastered</div></div>
-            <div style="flex:1; background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:14px; padding:14px 16px;"><div style="font-family:'Fraunces',serif; font-size:24px; color:var(--c3,#1B1A14);">7🔥</div><div style="font-size:11.5px; color:var(--c25,#79828A); margin-top:2px;">day streak</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== ASK YOUR LIBRARY ===================== -->
-  <div id="ask" style="scroll-margin-top:74px; background:var(--c9,#EDEFE9);">
-    <div style="max-width:1180px; margin:0 auto; padding:90px 32px; display:grid; grid-template-columns:0.95fr 1.05fr; gap:56px; align-items:center;">
-      <!-- visual: chat -->
-      <div style="min-width:0; display:flex; flex-direction:column; gap:12px;">
-        <div style="align-self:flex-end; max-width:78%; padding:13px 16px; border-radius:18px; border-bottom-right-radius:6px; background:var(--c16,#77B900);"><span style="font-size:14.5px; font-weight:500; color:var(--c17,#15210A);">What do my books say causes the greenhouse effect?</span></div>
-        <div style="align-self:flex-start; max-width:90%; padding:16px 18px; border-radius:18px; border-bottom-left-radius:6px; background:var(--c32,#FFFFFF); border:1px solid var(--c34,rgba(20,28,12,0.08)); box-shadow:0 18px 44px var(--c44,rgba(20,28,12,0.09));">
-          <div style="display:flex; align-items:center; gap:7px; margin-bottom:9px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="var(--c15,#4F7A00)"><path d="M12 3l1.7 5.1L19 10l-5.3 1.9L12 17l-1.7-5.1L5 10l5.3-1.9z"/></svg><span style="font-family:'DM Mono',monospace; font-size:9px; letter-spacing:1px; color:var(--c36,#6E8A3A);">KRIXO · ACROSS 6 BOOKS</span></div>
-          <div style="font-size:14.5px; line-height:1.62; color:var(--c58,#2C3530);">Greenhouse gases such as CO₂ trap heat radiating from Earth's surface, warming the lower atmosphere - a balance first described by <span style="color:var(--c3,#1B1A14);">Arrhenius in 1896</span> and central to modern climate science.</div>
-          <div style="display:flex; gap:7px; margin-top:13px; flex-wrap:wrap;">
-            <span style="display:inline-flex; align-items:center; gap:5px; height:24px; padding:0 9px; border-radius:7px; background:var(--c21,rgba(119,185,0,0.1)); border:1px solid var(--c31,rgba(119,185,0,0.26)); font-family:'DM Mono',monospace; font-size:9.5px; color:var(--c15,#4F7A00);">Earth's Climate · p.142</span>
-            <span style="display:inline-flex; align-items:center; gap:5px; height:24px; padding:0 9px; border-radius:7px; background:var(--c21,rgba(119,185,0,0.1)); border:1px solid var(--c31,rgba(119,185,0,0.26)); font-family:'DM Mono',monospace; font-size:9.5px; color:var(--c15,#4F7A00);">Atmospheric Science · p.61</span>
-          </div>
-        </div>
-        <div style="align-self:flex-start; display:inline-flex; align-items:center; gap:7px; padding:10px 14px; border-radius:14px; background:var(--c32,#FFFFFF); border:1px solid var(--c12,rgba(20,28,12,0.06));">
-          <span style="width:7px; height:7px; border-radius:50%; background:var(--c7,#98A0A8); animation:kxPulse 1.4s infinite;"></span>
-          <span style="width:7px; height:7px; border-radius:50%; background:var(--c7,#98A0A8); animation:kxPulse 1.4s .2s infinite;"></span>
-          <span style="width:7px; height:7px; border-radius:50%; background:var(--c7,#98A0A8); animation:kxPulse 1.4s .4s infinite;"></span>
-        </div>
-      </div>
-      <!-- copy -->
-      <div style="min-width:0;">
-        <div style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:2px; color:var(--c15,#4F7A00); text-transform:uppercase;">Ask your library</div>
-        <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:43px; line-height:1.08; letter-spacing:-1.4px; color:var(--c3,#1B1A14); margin:14px 0 0;">Chat with everything<br>you've ever read.</h2>
-        <p style="font-size:17.5px; line-height:1.64; color:var(--c2,#4B5560); margin:20px 0 0; max-width:480px;">Ask a question and Krixo answers from your whole library - or just one book - with tappable citations back to the exact page. Explain a paragraph, screenshot a diagram, or look up a word inline. The clever part: the search index and the search itself live <span style="color:var(--c3,#1B1A14); font-weight:500;">on your phone</span>. Your book files never leave it. Making a book searchable sends its text to our servers once, to build that index; after that, only your question and the few matching passages reach the AI.</p>
-        <div style="display:flex; gap:10px; margin-top:24px; flex-wrap:wrap;">
-          <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:10px; background:var(--c32,#FFFFFF); border:1px solid var(--c34,rgba(20,28,12,0.08)); font-size:13.5px; color:var(--c42,#3C4640);">Explain this</span>
-          <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:10px; background:var(--c32,#FFFFFF); border:1px solid var(--c34,rgba(20,28,12,0.08)); font-size:13.5px; color:var(--c42,#3C4640);">Screenshot → ask</span>
-          <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:10px; background:var(--c32,#FFFFFF); border:1px solid var(--c34,rgba(20,28,12,0.08)); font-size:13.5px; color:var(--c42,#3C4640);">Cited answers</span>
-          <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:10px; background:var(--c32,#FFFFFF); border:1px solid var(--c34,rgba(20,28,12,0.08)); font-size:13.5px; color:var(--c42,#3C4640);">Semantic X-ray search</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== PRIVACY ===================== -->
-  <div id="privacy" style="scroll-margin-top:74px; position:relative; background:radial-gradient(800px 500px at 50% 0%, var(--c38,#EDF1E3) 0%, var(--c9,#EDEFE9) 62%); border-top:1px solid var(--c12,rgba(20,28,12,0.06));">
-    <div style="max-width:900px; margin:0 auto; padding:96px 32px; text-align:center;">
-      <div style="display:flex; justify-content:center; margin-bottom:26px;">
-        <div style="position:relative; width:96px; height:96px; border-radius:26px; background:var(--c32,#FFFFFF); border:1px solid var(--c55,rgba(119,185,0,0.3)); display:flex; align-items:center; justify-content:center; box-shadow:0 20px 50px var(--c51,rgba(20,28,12,0.12));">
-          <div style="position:absolute; inset:-14px; border-radius:34px; background:radial-gradient(circle, var(--c59,rgba(119,185,0,0.18)), transparent 70%); animation:kxPulse 3s infinite;"></div>
-          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.7"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4" stroke-width="2"/></svg>
-        </div>
-      </div>
-      <div style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:2px; color:var(--c15,#4F7A00); text-transform:uppercase;">Privacy, not as a setting</div>
-      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:46px; line-height:1.1; letter-spacing:-1.6px; color:var(--c3,#1B1A14); margin:16px 0 0;">Your books never<br>leave your phone.</h2>
-      <p style="font-size:18px; line-height:1.64; color:var(--c2,#4B5560); max-width:560px; margin:20px auto 0;">Book files, extracted text, the search index and read-aloud all live <span style="color:var(--c3,#1B1A14); font-weight:500;">on your device</span>. When you ask the AI, retrieval happens locally and only the matching passages - plus your question - are sent for an answer. The cloud never holds your library.</p>
-      <div style="display:flex; justify-content:center; gap:14px; margin-top:34px; flex-wrap:wrap;">
-        <div style="background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:14px; padding:16px 22px; text-align:left;"><div style="font-family:'Fraunces',serif; font-size:26px; color:var(--c3,#1B1A14);">On-device</div><div style="font-size:12.5px; color:var(--c25,#79828A); margin-top:3px;">files, text &amp; search index</div></div>
-        <div style="background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:14px; padding:16px 22px; text-align:left;"><div style="font-family:'Fraunces',serif; font-size:26px; color:var(--c3,#1B1A14);">Offline</div><div style="font-size:12.5px; color:var(--c25,#79828A); margin-top:3px;">read, review &amp; listen</div></div>
-        <div style="background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:14px; padding:16px 22px; text-align:left;"><div style="font-family:'Fraunces',serif; font-size:26px; color:var(--c3,#1B1A14);">Zero</div><div style="font-size:12.5px; color:var(--c25,#79828A); margin-top:3px;">book content stored in cloud</div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== CAPABILITIES GRID ===================== -->
-  <div style="background:var(--c9,#EDEFE9);">
-    <div style="max-width:1180px; margin:0 auto; padding:90px 32px;">
-      <div style="text-align:center; margin-bottom:48px;">
-        <div style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:2px; color:var(--c15,#4F7A00); text-transform:uppercase;">The whole reading toolkit</div>
-        <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:40px; line-height:1.1; letter-spacing:-1.3px; color:var(--c3,#1B1A14); margin:14px 0 0;">A real reader, and so much more.</h2>
-      </div>
-      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
-
-        <div class="kx-card" style="background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:18px; padding:24px;">
-          <div style="width:42px; height:42px; border-radius:12px; background:var(--c21,rgba(119,185,0,0.1)); display:flex; align-items:center; justify-content:center; margin-bottom:15px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.8"><path d="M4 5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M13 3v5h5"/></svg></div>
-          <div style="font-weight:600; font-size:16.5px; color:var(--c10,#171A14);">Read anything</div>
-          <div style="font-size:13.5px; line-height:1.55; color:var(--c39,#79828A); margin-top:7px;">Continuous scroll, pinch-zoom, typography controls and 5 reading themes.</div>
-          <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:13px;"><span style="display:inline-flex; align-items:center; height:23px; padding:0 9px; border-radius:7px; background:var(--c38,#EDF1E3); border:1px solid var(--c34,rgba(20,28,12,0.08)); font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.5px; color:var(--c42,#3C4640);">PDF</span><span style="display:inline-flex; align-items:center; height:23px; padding:0 9px; border-radius:7px; background:var(--c38,#EDF1E3); border:1px solid var(--c34,rgba(20,28,12,0.08)); font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.5px; color:var(--c42,#3C4640);">EPUB</span><span style="display:inline-flex; align-items:center; height:23px; padding:0 9px; border-radius:7px; background:var(--c38,#EDF1E3); border:1px solid var(--c34,rgba(20,28,12,0.08)); font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.5px; color:var(--c42,#3C4640);">Web URL</span><span style="display:inline-flex; align-items:center; height:23px; padding:0 9px; border-radius:7px; background:transparent; border:1px dashed var(--c60,rgba(20,28,12,0.16)); font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.5px; color:var(--c7,#98A0A8);">More soon</span></div>
-        </div>
-
-        <div class="kx-card" style="background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:18px; padding:24px;">
-          <div style="width:42px; height:42px; border-radius:12px; background:var(--c21,rgba(119,185,0,0.1)); display:flex; align-items:center; justify-content:center; margin-bottom:15px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.8"><path d="M4 13v-1a8 8 0 0116 0v1"/><rect x="2.5" y="13" width="5" height="8" rx="2"/><rect x="16.5" y="13" width="5" height="8" rx="2"/></svg></div>
-          <div style="font-weight:600; font-size:16.5px; color:var(--c10,#171A14);">Audio overview</div>
-          <div style="font-size:13.5px; line-height:1.55; color:var(--c39,#79828A); margin-top:7px;">Turn any book into a spoken overview and listen to it like a personal podcast - the key ideas, narrated end to end.</div>
-        </div>
-
-        <div class="kx-card" style="background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:18px; padding:24px;">
-          <div style="width:42px; height:42px; border-radius:12px; background:var(--c21,rgba(119,185,0,0.1)); display:flex; align-items:center; justify-content:center; margin-bottom:15px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.8"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M16 9a4 4 0 010 6M19 6a8 8 0 010 12"/></svg></div>
-          <div style="font-weight:600; font-size:16.5px; color:var(--c10,#171A14);">Full-book read-aloud</div>
-          <div style="font-size:13.5px; line-height:1.55; color:var(--c39,#79828A); margin-top:7px;">Your phone's voice reads entire books aloud, offline, with word-by-word follow at 0.5–2× speed.</div>
-        </div>
-
-        <div class="kx-card" style="background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:18px; padding:24px;">
-          <div style="width:42px; height:42px; border-radius:12px; background:var(--c21,rgba(119,185,0,0.1)); display:flex; align-items:center; justify-content:center; margin-bottom:15px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.8"><path d="M12 3v11"/><path d="M8 10l4 4 4-4"/><path d="M5 20h14"/></svg></div>
-          <div style="font-weight:600; font-size:16.5px; color:var(--c10,#171A14);">Export your notes</div>
-          <div style="font-size:13.5px; line-height:1.55; color:var(--c39,#79828A); margin-top:7px;">Send highlights, notes and quiz cards out to the tools you already use.</div>
-          <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:13px;"><span style="display:inline-flex; align-items:center; height:23px; padding:0 9px; border-radius:7px; background:var(--c38,#EDF1E3); border:1px solid var(--c34,rgba(20,28,12,0.08)); font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.5px; color:var(--c42,#3C4640);">Markdown</span><span style="display:inline-flex; align-items:center; height:23px; padding:0 9px; border-radius:7px; background:var(--c38,#EDF1E3); border:1px solid var(--c34,rgba(20,28,12,0.08)); font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.5px; color:var(--c42,#3C4640);">CSV</span><span style="display:inline-flex; align-items:center; height:23px; padding:0 9px; border-radius:7px; background:var(--c21,rgba(119,185,0,0.1)); border:1px solid var(--c1,rgba(119,185,0,0.28)); font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.5px; color:var(--c15,#4F7A00);">Anki .apkg</span></div>
-        </div>
-
-        <div class="kx-card" style="background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:18px; padding:26px;">
-          <div style="width:42px; height:42px; border-radius:12px; background:var(--c21,rgba(119,185,0,0.1)); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-          <div style="font-weight:600; font-size:17px; color:var(--c10,#171A14);">Semantic X-ray</div>
-          <div style="font-size:14px; line-height:1.55; color:var(--c39,#79828A); margin-top:7px;">Search by meaning across your whole library - or within a single book - and tap any result to jump straight to the passage.</div>
-        </div>
-
-        <div class="kx-card" style="background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:18px; padding:26px;">
-          <div style="width:42px; height:42px; border-radius:12px; background:var(--c21,rgba(119,185,0,0.1)); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></div>
-          <div style="font-weight:600; font-size:17px; color:var(--c10,#171A14);">Highlight &amp; ink</div>
-          <div style="font-size:14px; line-height:1.55; color:var(--c39,#79828A); margin-top:7px;">Four-colour highlights, freehand pen, notes and region screenshots - all collected in one unified Saved panel.</div>
-        </div>
-
-        <div class="kx-card" style="background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:18px; padding:26px;">
-          <div style="width:42px; height:42px; border-radius:12px; background:var(--c21,rgba(119,185,0,0.1)); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
-          <div style="font-weight:600; font-size:17px; color:var(--c10,#171A14);">Scanned books, OCR'd</div>
-          <div style="font-size:14px; line-height:1.55; color:var(--c39,#79828A); margin-top:7px;">Open a scanned PDF and Krixo reads the text for you, so highlights, search and quizzes work on it like any other book.</div>
-        </div>
-
-        <div class="kx-card" style="background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:18px; padding:26px;">
-          <div style="width:42px; height:42px; border-radius:12px; background:var(--c21,rgba(119,185,0,0.1)); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
-          <div style="font-weight:600; font-size:17px; color:var(--c10,#171A14);">Mastery &amp; vocabulary</div>
-          <div style="font-size:14px; line-height:1.55; color:var(--c39,#79828A); margin-top:7px;">See each idea mature from new to mastered, build a vocabulary deck from dictionary look-ups, and keep your streak going.</div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== ROADMAP ===================== -->
-  <div style="background:var(--c41,#F6F8F1); border-top:1px solid var(--c12,rgba(20,28,12,0.06)); border-bottom:1px solid var(--c12,rgba(20,28,12,0.06));">
-    <div style="max-width:1180px; margin:0 auto; padding:64px 32px;">
-      <div style="text-align:center; margin-bottom:40px;">
-        <div style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:2px; color:var(--c7,#98A0A8); text-transform:uppercase;">Roadmap</div>
-        <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:32px; letter-spacing:-1px; color:var(--c3,#1B1A14); margin:12px 0 0;">Android first. Everywhere next.</h2>
-      </div>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;">
-        <div style="background:var(--c32,#FFFFFF); border:1px solid var(--c5,rgba(119,185,0,0.34)); border-radius:18px; padding:24px; position:relative;">
-          <span style="position:absolute; top:18px; right:18px; font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:1px; color:var(--c17,#15210A); background:var(--c16,#77B900); padding:4px 9px; border-radius:7px;">LAUNCHING NOW</span>
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="1.7"><path d="M5 16V9a7 7 0 0114 0v7"/><path d="M5 16h14v2a2 2 0 01-2 2H7a2 2 0 01-2-2z"/><path d="M8 4l-1-2M16 4l1-2"/></svg>
-          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; color:var(--c3,#1B1A14); margin-top:16px;">Android</div>
-          <div style="font-size:13.5px; color:var(--c39,#79828A); margin-top:6px;">The full app - reading, AI, quizzes, read-aloud - shipping first on Google Play.</div>
-        </div>
-        <div style="background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:18px; padding:24px; position:relative;">
-          <span style="position:absolute; top:18px; right:18px; font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:1px; color:var(--c35,#79828A); border:1px solid var(--c61,rgba(20,28,12,0.14)); padding:4px 9px; border-radius:7px;">NEXT</span>
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--c7,#98A0A8)" stroke-width="1.7"><path d="M16 3a4 4 0 01-2 3M12 7c-2 0-3.5 1.5-3.5 4 0 3 2 7 3.5 7s1.5-1 3-1 1.5 1 3 1 3.5-4 3.5-7c0-2.5-1.5-4-3.5-4-1.5 0-2 1-3 1s-1.5-1-3-1z"/></svg>
-          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; color:var(--c42,#3C4640); margin-top:16px;">iOS</div>
-          <div style="font-size:13.5px; color:var(--c39,#79828A); margin-top:6px;">Coming to iPhone &amp; iPad, with the same private-first, books-on-device design.</div>
-        </div>
-        <div style="background:var(--c32,#FFFFFF); border:1px solid var(--c33,rgba(20,28,12,0.07)); border-radius:18px; padding:24px; position:relative;">
-          <span style="position:absolute; top:18px; right:18px; font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:1px; color:var(--c35,#79828A); border:1px solid var(--c61,rgba(20,28,12,0.14)); padding:4px 9px; border-radius:7px;">LATER</span>
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--c7,#98A0A8)" stroke-width="1.7"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; color:var(--c42,#3C4640); margin-top:16px;">Windows &amp; Mac</div>
-          <div style="font-size:13.5px; color:var(--c39,#79828A); margin-top:6px;">A desktop app so your library, highlights and review deck follow you to the big screen.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== PRICING ===================== -->
-  <div id="pricing" style="scroll-margin-top:74px; background:var(--c9,#EDEFE9);">
-    <div style="max-width:1180px; margin:0 auto; padding:90px 32px;">
-      <div style="text-align:center; margin-bottom:48px;">
-        <div style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:2px; color:var(--c15,#4F7A00); text-transform:uppercase;">Pricing</div>
-        <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:40px; letter-spacing:-1.3px; color:var(--c3,#1B1A14); margin:14px 0 0;">Free to read. Pro to remember.</h2>
-        <p style="font-size:16.5px; color:var(--c2,#4B5560); margin:14px auto 0; max-width:520px;">Reading, highlighting, search and read-aloud are free forever. Pro unlocks the full spaced-repetition study system and unlimited AI.</p>
-      </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:840px; margin:0 auto;">
-        <!-- free -->
-        <div style="background:var(--c32,#FFFFFF); border:1px solid var(--c34,rgba(20,28,12,0.08)); border-radius:22px; padding:32px;">
-          <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; color:var(--c10,#171A14);">Free</div>
-          <div style="display:flex; align-items:baseline; gap:6px; margin-top:12px;"><span style="font-family:'Fraunces',serif; font-size:46px; color:var(--c3,#1B1A14);">$0</span><span style="font-size:14px; color:var(--c25,#79828A);">forever</span></div>
-          <div style="height:1px; background:var(--c33,rgba(20,28,12,0.07)); margin:24px 0;"></div>
-          <div style="display:flex; flex-direction:column; gap:13px;">
-            <div style="display:flex; gap:10px; align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.4" style="flex:none; margin-top:1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:14.5px; color:var(--c42,#3C4640);">Unlimited reading - PDF, EPUB &amp; web</span></div>
-            <div style="display:flex; gap:10px; align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.4" style="flex:none; margin-top:1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:14.5px; color:var(--c42,#3C4640);">Highlights, ink &amp; X-ray search</span></div>
-            <div style="display:flex; gap:10px; align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.4" style="flex:none; margin-top:1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:14.5px; color:var(--c42,#3C4640);">Read-aloud in your phone's voice</span></div>
-            <div style="display:flex; gap:10px; align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c7,#98A0A8)" stroke-width="2.4" style="flex:none; margin-top:1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:14.5px; color:var(--c25,#79828A);">5 AI explanations &amp; chats / month</span></div>
-          </div>
-        </div>
-        <!-- pro -->
-        <div style="position:relative; background:linear-gradient(170deg,var(--c62,#FBF7E8),var(--c32,#FFFFFF)); border:1px solid var(--c4,rgba(119,185,0,0.4)); border-radius:22px; padding:32px; box-shadow:0 24px 60px var(--c6,rgba(20,28,12,0.10));">
-          <span style="position:absolute; top:-12px; left:32px; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:1px; color:var(--c17,#15210A); background:var(--c16,#77B900); padding:5px 11px; border-radius:8px;">FOR POWER LEARNERS</span>
-          <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; color:var(--c15,#4F7A00);">Pro</div>
-          <div style="display:flex; align-items:baseline; gap:6px; margin-top:12px;"><span style="font-family:'Fraunces',serif; font-size:46px; color:var(--c3,#1B1A14);">$7</span><span style="font-size:14px; color:var(--c25,#79828A);">/ month</span></div>
-          <div style="height:1px; background:var(--c59,rgba(119,185,0,0.18)); margin:24px 0;"></div>
-          <div style="display:flex; flex-direction:column; gap:13px;">
-            <div style="display:flex; gap:10px; align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="2.4" style="flex:none; margin-top:1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:14.5px; color:var(--c10,#171A14);">Everything in Free, plus -</span></div>
-            <div style="display:flex; gap:10px; align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="2.4" style="flex:none; margin-top:1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:14.5px; color:var(--c42,#3C4640);">Spaced-repetition quizzes, recall &amp; mastery</span></div>
-            <div style="display:flex; gap:10px; align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="2.4" style="flex:none; margin-top:1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:14.5px; color:var(--c42,#3C4640);">Unlimited AI explain &amp; Ask-the-Library</span></div>
-            <div style="display:flex; gap:10px; align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="2.4" style="flex:none; margin-top:1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:14.5px; color:var(--c42,#3C4640);">AI study-notes digest per chapter</span></div>
-            <div style="display:flex; gap:10px; align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c15,#4F7A00)" stroke-width="2.4" style="flex:none; margin-top:1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:14.5px; color:var(--c42,#3C4640);">AI-graded open answers</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== FINAL CTA ===================== -->
-  <div style="position:relative; background:radial-gradient(900px 500px at 50% 120%, var(--c63,#F3F0E6) 0%, var(--c9,#EDEFE9) 60%); border-top:1px solid var(--c12,rgba(20,28,12,0.06));">
-    <div style="max-width:760px; margin:0 auto; padding:96px 32px; text-align:center;">
-      <div style="display:flex; justify-content:center; margin-bottom:24px;">
-        <div style="width:52px; height:52px; border-radius:15px; background:var(--c13,#FFFFFF); border:1px solid var(--c5,rgba(119,185,0,0.34)); display:flex; align-items:center; justify-content:center;">
-          <svg width="27" height="27" viewBox="0 0 48 48" fill="none"><path d="M13 14l22 20" stroke="var(--c15,#4F7A00)" stroke-width="4.4" stroke-linecap="round"/><path d="M35 14L13 34" stroke="var(--c10,#171A14)" stroke-width="4.4" stroke-linecap="round"/></svg>
-        </div>
-      </div>
-      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:44px; line-height:1.1; letter-spacing:-1.5px; color:var(--c3,#1B1A14); margin:0;">Be first to read,<br>and to remember.</h2>
-      <p style="font-size:17.5px; color:var(--c2,#4B5560); margin:18px auto 0; max-width:460px;">Join the waitlist and we'll email you the moment Krixo lands on Google Play.</p>
-      <div style="margin-top:30px; display:flex; justify-content:center;">
-        <div class="wl-region">
-          <div>
-            <div class="wl-form-wrap">
-              <form class="wl-formEl" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate style="display:flex; gap:10px; width:460px; max-width:100%;">
-                <input type="hidden" name="form-name" value="waitlist">
-                <input type="hidden" name="source" value="footer-cta">
-                <p style="display:none;"><label>Leave this empty <input name="bot-field"></label></p>
-                <input class="kx-input wl-email" type="email" name="email" required placeholder="you@email.com" style="flex:1; min-width:0; height:54px; padding:0 18px; border-radius:13px; background:var(--c22,#FFFFFF); border:1px solid var(--c23,rgba(20,28,12,0.12)); color:var(--c10,#171A14); font-family:'Outfit',sans-serif; font-size:15.5px;">
-                <button class="kx-navcta" type="submit" style="flex:none; height:54px; padding:0 24px; border:none; border-radius:13px; background:var(--c16,#77B900); color:var(--c17,#15210A); font-family:'Outfit',sans-serif; font-weight:600; font-size:15.5px; cursor:pointer;">Join the waitlist</button>
-              </form>
-            </div>
-            <div class="wl-done-wrap" style="display:none;">
-              <div style="display:inline-flex; align-items:center; gap:11px; height:54px; padding:0 24px; border-radius:13px; background:rgba(45,212,191,0.1); border:1px solid rgba(45,212,191,0.4);">
-                <span style="width:24px; height:24px; border-radius:7px; background:rgba(45,212,191,0.2); display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                <span style="font-size:15.5px; color:var(--c24,#0C3A33); font-weight:500;">You're on the list - talk soon.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-      <div style="font-size:13px; color:var(--c7,#98A0A8); margin-top:16px;">Android first - iOS &amp; desktop coming next · No spam, one launch email.</div>
-    </div>
-  </div>
-
-  <!-- ===================== FOOTER ===================== -->
-  <div style="background:var(--c64,#E4E7DD); border-top:1px solid var(--c12,rgba(20,28,12,0.06));">
-    <div style="max-width:1180px; margin:0 auto; padding:40px 32px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;">
-      <div style="display:flex; align-items:center; gap:10px;">
-        <svg width="22" height="22" viewBox="0 0 48 48" fill="none"><path d="M13 14l22 20" stroke="var(--c15,#4F7A00)" stroke-width="4.4" stroke-linecap="round"/><path d="M35 14L13 34" stroke="var(--c35,#79828A)" stroke-width="4.4" stroke-linecap="round"/></svg>
-        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px;"><span style="color:var(--c42,#3C4640);">kri</span><span style="color:var(--c15,#4F7A00);">x</span><span style="color:var(--c42,#3C4640);">o</span></span>
-        <span style="font-size:12.5px; color:var(--c7,#98A0A8); margin-left:6px;">Read · Understand · Remember</span>
-      </div>
-      <div class="footer-links" style="display:flex; gap:18px; align-items:center; flex-wrap:nowrap;">
-        <a class="kx-foot" href="#pricing" style="color:var(--c25,#79828A); text-decoration:none; font-size:13.5px;">Pricing</a>
-        <a class="kx-foot" href="#waitlist" style="color:var(--c25,#79828A); text-decoration:none; font-size:13.5px;">Waitlist</a>
-        <a class="kx-foot" href="/privacy" style="color:var(--c25,#79828A); text-decoration:none; font-size:13.5px;">Privacy Policy</a>
-        <a class="kx-foot" href="/terms" style="color:var(--c25,#79828A); text-decoration:none; font-size:13.5px;">Terms</a>
-        <a class="kx-foot" href="mailto:support@krixo.in" style="color:var(--c25,#79828A); text-decoration:none; font-size:13.5px;">Contact us</a>
-      </div>
-      <span style="font-size:12.5px; color:var(--c65,#A8AEA4);">© 2026 Krixo</span>
-    </div>
-  </div>
-
-</div>
 <script>
 (function(){
-  var root=document.documentElement;
-  // ---- theme persistence ----
-  var KEY='krixo-theme';
+  var root=document.documentElement, KEY='krixo-theme';
   var meta=document.getElementById('metaThemeColor');
-  function syncMeta(){ if(meta) meta.setAttribute('content', root.getAttribute('data-theme')==='dark' ? '#0d0f13' : '#EDEFE9'); }
+  function syncMeta(){ if(meta) meta.setAttribute('content', root.getAttribute('data-theme')==='dark' ? '#0B0B0D' : '#EDF1E3'); }
   try{ if(localStorage.getItem(KEY)==='dark') root.setAttribute('data-theme','dark'); }catch(e){}
   syncMeta();
   var btn=document.getElementById('themeToggle');
   if(btn){ btn.addEventListener('click',function(){
-    var dark=root.getAttribute('data-theme')==='dark';
-    if(dark){ root.removeAttribute('data-theme'); try{localStorage.setItem(KEY,'lime');}catch(e){} }
-    else{ root.setAttribute('data-theme','dark'); try{localStorage.setItem(KEY,'dark');}catch(e){} }
+    if(root.getAttribute('data-theme')==='dark'){ root.removeAttribute('data-theme'); try{localStorage.setItem(KEY,'lime');}catch(e){} }
+    else { root.setAttribute('data-theme','dark'); try{localStorage.setItem(KEY,'dark');}catch(e){} }
     syncMeta();
-  });}
-  // ---- waitlist forms ----
+  }); }
+
+  // ---- video facade: no YouTube request until the user clicks ----
+  var vf=document.getElementById('vframe'), vb=document.getElementById('vbtn');
+  if(vf&&vb){ vb.addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+vf.getAttribute('data-id')+'?autoplay=1&rel=0&modestbranding=1';
+    f.title='Krixo product video';
+    f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    f.setAttribute('allowfullscreen','');
+    vf.innerHTML=''; vf.appendChild(f);
+  }); }
+
+  // ---- waitlist ----
   var EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   document.querySelectorAll('.wl-formEl').forEach(function(form){
     form.addEventListener('submit',function(e){
       e.preventDefault();
       var input=form.querySelector('.wl-email');
       var val=(input&&input.value||'').trim();
-      if(!EMAIL.test(val)){ if(input){input.focus(); input.style.borderColor='#e5574a';} return; }
+      if(!EMAIL.test(val)){ if(input){ input.focus(); input.style.borderColor='#e5574a'; } return; }
       var data=new URLSearchParams(new FormData(form)); data.set('email',val);
       fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data.toString()})['catch'](function(){});
       var region=form.closest('.wl-region');
       if(region){
         var f=region.querySelector('.wl-form-wrap'), d=region.querySelector('.wl-done-wrap');
-        if(f) f.style.display='none';
-        if(d) d.style.display='inline-flex';
+        if(f) f.hidden=true; if(f) f.style.display='none';
+        if(d){ d.hidden=false; d.style.display='inline-flex'; }
       }
     });
     var inp=form.querySelector('.wl-email');
