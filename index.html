@@ -132,10 +132,11 @@ img{max-width:100%}
 .vhead{text-align:center;margin-bottom:44px;display:flex;flex-direction:column;align-items:center}
 .vframe{position:relative;max-width:1000px;margin:0 auto;border-radius:20px;overflow:hidden;
   border:1px solid var(--rule);background:#0c0e08;box-shadow:var(--shadow);aspect-ratio:16/9}
+.vframe picture{display:block;width:100%;height:100%}
 .vframe img,.vframe iframe{display:block;width:100%;height:100%;border:0}
-/* scrim: guarantees button contrast whatever the poster art is doing */
+/* light scrim behind the disc only; the poster art is already dark and high contrast */
 .vshade{position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(58% 58% at 50% 50%, rgba(0,0,0,.58) 0%, rgba(0,0,0,.34) 60%, rgba(0,0,0,.30) 100%);
+  background:radial-gradient(26% 44% at 50% 50%, rgba(0,0,0,.50) 0%, rgba(0,0,0,.18) 62%, transparent 100%);
   transition:opacity .18s}
 .vbtn{position:absolute;inset:0;display:grid;place-items:center;background:transparent;border:0;cursor:pointer;padding:0}
 .vbtn .disc{width:88px;height:88px;border-radius:999px;background:var(--signal);display:grid;place-items:center;
@@ -305,7 +306,10 @@ img{max-width:100%}
       <p class="dsub" style="text-align:center">The whole reader, from the first import to the card that brings it back.</p>
     </div>
     <div class="vframe" id="vframe" data-id="ywSL9GbbUjQ">
-      <img src="assets/video-poster.jpg" width="1280" height="720" alt="Krixo: The Reading App That Won't Let You Forget" loading="lazy" decoding="async">
+      <picture>
+        <source srcset="assets/video-poster.webp" type="image/webp">
+        <img src="assets/video-poster.jpg" width="1280" height="720" alt="Krixo: The Reading App That Won't Let You Forget" loading="lazy" decoding="async">
+      </picture>
       <span class="vshade"></span>
       <button class="vbtn" id="vbtn" type="button" aria-label="Play the Krixo product video">
         <span class="disc"><svg width="32" height="32" viewBox="0 0 24 24" fill="var(--onAccent)" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
