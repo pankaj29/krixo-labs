@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Krixo - Read it once. Remember it for good.</title>
-<meta name="description" content="Krixo is an AI reader that keeps your books on your device. Import any PDF, EPUB, Word doc, Markdown, text file or link. Highlight what matters, and every highlight becomes a spaced-repetition card so you actually remember it.">
+<meta name="description" content="Krixo is an on-device AI reader. Import any PDF, EPUB or link, highlight what matters, and every highlight becomes a spaced-repetition card so you actually remember it.">
 <meta name="theme-color" content="#EDF1E3" id="metaThemeColor">
 <link rel="canonical" href="https://krixo.in/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://krixo.in/">
 <meta property="og:title" content="Krixo - Read it once. Remember it for good.">
-<meta property="og:description" content="An AI reader that keeps your books on your device. Every highlight becomes a spaced-repetition card.">
+<meta property="og:description" content="An on-device AI reader. Every highlight becomes a spaced-repetition card.">
 <meta property="og:image" content="https://krixo.in/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Krixo - Read it once. Remember it for good.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Krixo - Read it once. Remember it for good.">
-<meta name="twitter:description" content="An AI reader that keeps your books on your device. Every highlight becomes a spaced-repetition card.">
+<meta name="twitter:description" content="An on-device AI reader. Every highlight becomes a spaced-repetition card.">
 <meta name="twitter:image" content="https://krixo.in/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -165,6 +165,8 @@ img{max-width:100%}
   color:var(--ink);margin:0 auto;max-width:820px;line-height:1.1}
 .psub{font-size:17px;color:var(--ink3);margin:16px auto 0;max-width:640px;line-height:1.55}
 .stats{display:flex;justify-content:center;gap:56px;margin-top:48px;flex-wrap:wrap}
+.psub .plink{color:var(--signalD);text-decoration:none;border-bottom:1px solid var(--signalBg)}
+.psub .plink:hover{border-bottom-color:var(--signal)}
 .stat .n{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:30px;color:var(--signalD)}
 .stat .d{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-top:6px;letter-spacing:.4px}
 
@@ -253,7 +255,7 @@ img{max-width:100%}
       <a class="kx-link" href="#watch">Watch</a>
       <a class="kx-link" href="#read">Read</a>
       <a class="kx-link" href="#remember">Remember</a>
-      <a class="kx-link" href="#privacy">Privacy</a>
+      <a class="kx-link" href="#on-device">On-device</a>
       <a class="kx-link" href="#pricing">Pricing</a>
       <button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme" title="Switch theme">
         <svg class="ic-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg>
@@ -272,10 +274,10 @@ img{max-width:100%}
         <span class="ping"><i></i><b></b></span>
         <span class="lbl">Pre-launch</span>
         <span class="div"></span>
-        <span class="desc">Books stay on device</span>
+        <span class="desc">On-device AI reader</span>
       </div>
       <h1 class="h1">Read it once.<br><span class="accent">Remember it for good.</span></h1>
-      <p class="herosub">Import any PDF, EPUB, Word doc, Markdown, text file or link. Highlight what matters. Krixo turns every highlight into a spaced-repetition card and shows it back to you right before you would have forgotten.</p>
+      <p class="herosub">Import any PDF, EPUB or link. Highlight what matters. Krixo turns every highlight into a spaced-repetition card and shows it back to you right before you would have forgotten.</p>
       <div class="wl-region">
       <div class="wl-form-wrap">
         <form class="wl-formEl" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
@@ -394,13 +396,14 @@ img{max-width:100%}
   </section>
 
 <!-- ===================== PRIVACY ===================== -->
-<section class="privacy" id="privacy">
+<section class="privacy" id="on-device">
   <div class="wrap">
     <div class="lockbox">
       <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 018 0v3"/><circle cx="12" cy="15.5" r="1.4"/></svg>
     </div>
+    <div class="eyebrow" style="justify-content:center"><span class="rule"></span>On-device</div>
     <h2 class="ptitle">Your books stay on your phone.</h2>
-    <p class="psub">Search runs on your device. Only your question and the matching passages ever reach the AI.</p>
+    <p class="psub">Search runs on your device. Only your question and the matching passages ever reach the AI. The full detail is in the <a class="plink" href="/privacy">Privacy Policy</a>.</p>
     <div class="stats">
       <div class="stat"><div class="n">On your device</div><div class="d">files &middot; text &middot; index</div></div>
       <div class="stat"><div class="n">Only matches</div><div class="d">your question + passages</div></div>
