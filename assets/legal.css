@@ -18,8 +18,7 @@ body{margin:0;background:var(--bg);color:var(--ink2);
   border-bottom:1px solid var(--rule2)}
 .navin{display:flex;align-items:center;justify-content:space-between;padding:15px 32px;max-width:1180px;margin:0 auto}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
-.brandtile{display:block;border-radius:10px;flex:none}
-.brandtile.foot{border-radius:7px}
+.mark{display:block;flex:none}
 .wordmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.5px;color:var(--ink)}
 .wordmark .x{color:var(--signal)}
 .navr{display:flex;align-items:center;gap:26px}
