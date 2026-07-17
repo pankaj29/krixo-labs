@@ -65,8 +65,8 @@ img{max-width:100%}
   border-bottom:1px solid var(--rule2)}
 .navin{display:flex;align-items:center;justify-content:space-between;padding:15px 32px;max-width:1180px;margin:0 auto}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
-.brandbox{width:34px;height:34px;border-radius:10px;background:var(--paper3);border:1px solid var(--rule);
-  display:grid;place-items:center}
+.brandtile{display:block;border-radius:10px;flex:none}
+.brandtile.foot{border-radius:7px}
 .wordmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.5px;color:var(--ink)}
 .wordmark .x{color:var(--signal)}
 .navr{display:flex;align-items:center;gap:26px}
@@ -233,7 +233,7 @@ img{max-width:100%}
 <header class="nav">
   <div class="navin">
     <a class="brand" href="/">
-      <div class="brandbox"><svg width="19" height="19" viewBox="0 0 48 48" fill="none"><path d="M13 14l22 20" stroke="var(--signal)" stroke-width="4.4" stroke-linecap="round"/><path d="M35 14L13 34" stroke="var(--ink)" stroke-width="4.4" stroke-linecap="round"/></svg></div>
+      <img class="brandtile" src="/assets/logo/krixo-tile.png" width="34" height="34" alt="" fetchpriority="high">
       <span class="wordmark">kri<span class="x">x</span>o</span>
     </a>
     <nav class="navr">
@@ -394,7 +394,7 @@ img{max-width:100%}
 <footer class="foot">
   <div class="footin">
     <div class="footbrand">
-      <svg width="22" height="22" viewBox="0 0 48 48" fill="none"><path d="M13 14l22 20" stroke="var(--signal)" stroke-width="4.4" stroke-linecap="round"/><path d="M35 14L13 34" stroke="var(--ink)" stroke-width="4.4" stroke-linecap="round"/></svg>
+      <img class="brandtile foot" src="/assets/logo/krixo-tile.png" width="24" height="24" alt="">
       <span class="wordmark" style="font-size:17px">kri<span class="x">x</span>o</span>
       <span class="foottag">Read &middot; Understand &middot; Remember</span>
     </div>
