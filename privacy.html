@@ -46,7 +46,7 @@
 <h2>The short version</h2>
 <div class="card">
 <ul>
-  <li><strong>Your book files never leave your device.</strong> The PDF or EPUB itself is stored only on your phone. We never upload it, and we never store a copy.</li>
+  <li><strong>We never store your book files.</strong> The PDF or EPUB itself lives on your phone and we keep no copy. Two things are worth naming: importing a Word, Markdown or text file sends it to us to convert, and we return the result without keeping it; and if you switch on cloud backup, your books are copied to your own Google Drive or Dropbox.</li>
   <li><strong>The text inside your books does leave, once.</strong> To make a book searchable and to answer questions about it, its text is sent to our servers and on to our AI providers. We do not store that text on our servers; the resulting search index is stored on your phone.</li>
   <li><strong>Your highlights, notes and progress are stored in our database</strong> so they sync across devices and survive a reinstall.</li>
   <li><strong>We do not sell your data</strong>, and we do not show you advertising.</li>
@@ -68,7 +68,9 @@
 <h3>Book content</h3>
 <p>This is the part people care about most, so it deserves detail rather than a slogan.</p>
 <ul>
-  <li>The <strong>book file</strong> stays on your device. There is no code path that uploads it.</li>
+  <li>The <strong>book file</strong> stays on your device. Nothing uploads your PDF or EPUB to us, and we never keep a copy of any book file.</li>
+  <li>If you import a <strong>Word, Markdown or text file</strong>, the device sends that file to us so we can convert it into an EPUB. We convert it in memory, send the EPUB straight back, and write nothing to our storage or database.</li>
+  <li>If you turn on <strong>cloud backup</strong>, your book files are uploaded to <strong>your own</strong> Google Drive or Dropbox account, so you can restore them on another device. They go to your cloud, not ours, and we cannot read them. You choose whether to connect an account, and you can disconnect it at any time.</li>
   <li>When you add a book, its <strong>text is split into passages and sent to our servers</strong>, which forward them to Voyage AI to convert into numeric vectors. Those vectors come back and are stored on your phone. We do not keep the text or the vectors.</li>
   <li>When you use <strong>Ask, Explain, Notes, quizzes or Audio Overview</strong>, the relevant text is sent to our AI providers to produce the answer. Audio Overview summarises the whole book, so it sends the whole book's text.</li>
   <li>If you <strong>screenshot part of a page</strong> and ask about it, that image is stored in our storage and sent to a vision model.</li>
@@ -80,7 +82,7 @@
 <p>Your IP address, used to guess your country so we can show the right currency, and to apply rate limits. A device identifier, so the app knows which of your devices holds which book. If you enable reminders, a push token and your time zone.</p>
 
 <h3>Payments</h3>
-<p>Payments are processed by Razorpay. Your card and banking details go to Razorpay, never to us. We store only your subscription status, when it started, when it expires, and the payment identifier.</p>
+<p>Payments are processed by <strong>Razorpay</strong> when you buy from us directly, and by <strong>Google Play Billing</strong> when you buy inside the app you installed from the Google Play Store. Your card and banking details go to whichever one handles the payment, never to us. We store only your subscription status, when it started, when it expires, and the payment identifier.</p>
 
 <h2>Who processes your data</h2>
 <p>These are our sub-processors. They receive only what is listed.</p>
@@ -95,6 +97,7 @@
 <tr><td>Google Cloud</td><td>Page images of scanned books, for text recognition. Google Sign-In, if you use it.</td><td>United States</td></tr>
 <tr><td>Expo &amp; Google FCM</td><td>Your push token, to deliver reminders</td><td>United States</td></tr>
 <tr><td>Razorpay</td><td>Payment details</td><td>India</td></tr>
+<tr><td>Google Play Billing</td><td>Payment details</td><td>United States</td></tr>
 </table>
 
 <div class="note">
